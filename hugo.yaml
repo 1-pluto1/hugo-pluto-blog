@@ -171,7 +171,7 @@ params:
 
   # 关联编辑
   editPost:
-    URL: 'https://github.com/1-pluto1/hugo-pluto-blog/edit/main/content/post'
+    URL: 'https://github.com/1-pluto1/hugo-pluto-blog/edit/main/content'
     Text: 'Edit on GitHub' # edit text
     appendFilePath: true # to append file path to Edit link
 
