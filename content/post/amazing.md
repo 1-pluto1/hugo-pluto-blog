@@ -16,7 +16,11 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
+categories:
+  - research
+  - l l m
 ---
+
 
 
 f;aa;sfja;fjaeofjao
