@@ -289,84 +289,284 @@
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-07/</link>
       <pubDate>Fri, 24 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-07/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;十三stl函数&#34;&gt;十三、STL函数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;beg&lt;/code&gt;为序列的初始地址&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;end&lt;/code&gt;为序列的尾地址&lt;/p&gt;
+&lt;h4 id=&#34;accumulate&#34;&gt;&lt;strong&gt;accumulate&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;accumulate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;beg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;复杂度: O(N)&lt;/p&gt;
+&lt;p&gt;作用：对一个序列的元素求和&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;init&lt;/code&gt;为对序列元素求和的&lt;strong&gt;初始值&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;返回值类型：与&lt;code&gt;init&lt;/code&gt; 相同&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基础累加求和：&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 06</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-06/</link>
       <pubDate>Thu, 23 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-06/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;十一array数组&#34;&gt;十一、array数组&lt;/h3&gt;
+&lt;h4 id=&#34;111-介绍&#34;&gt;11.1 介绍&lt;/h4&gt;
+&lt;p&gt;头文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;array&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;array&lt;/code&gt;是C++11新增的容器，效率与普通数据相差无几，比&lt;code&gt;vector&lt;/code&gt;效率要高，自身添加了一些成员函数。&lt;/p&gt;
+&lt;p&gt;和其它容器不同，&lt;code&gt;array&lt;/code&gt; 容器的大小是&lt;strong&gt;固定&lt;/strong&gt;的，无法动态的扩展或收缩，&lt;strong&gt;只允许访问或者替换存储的元素。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 04</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-04/</link>
       <pubDate>Wed, 22 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-04/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;六map&#34;&gt;六、map&lt;/h3&gt;
+&lt;h4 id=&#34;61-介绍&#34;&gt;6.1 介绍&lt;/h4&gt;
+&lt;p&gt;映射类似于函数的对应关系，每一个&lt;strong&gt;x&lt;/strong&gt;对应一个&lt;strong&gt;y&lt;/strong&gt;,而&lt;strong&gt;map&lt;/strong&gt;是每个键对应一个值。和python的字典非常相似。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//头文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;map&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//初始化定义
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//node是结构体类型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;map特性：map会按照键的顺序从小到大自动排序，键的类型必须可以比较大小&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 05</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-05/</link>
       <pubDate>Wed, 22 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-05/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;九string&#34;&gt;九、string&lt;/h3&gt;
+&lt;h4 id=&#34;91-介绍&#34;&gt;9.1 介绍&lt;/h4&gt;
+&lt;p&gt;string是一个字符串类，和&lt;strong&gt;char&lt;/strong&gt;型字符串类似。&lt;/p&gt;
+&lt;p&gt;可以把string理解为一个字符串类型，像int一样可以定义。&lt;/p&gt;
+&lt;h4 id=&#34;92-初始化及定义&#34;&gt;9.2 初始化及定义&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//头文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;string&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//1.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//生成空字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//2.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;123456789&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//生成&amp;#34;123456789&amp;#34;的复制品
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//3.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12345&amp;#34;&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//结果为&amp;#34;123&amp;#34;,从0开始，长度为3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//4.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12345&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//结果为&amp;#34;12345&amp;#34;,长度为5
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//5.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//结果为&amp;#34;22222&amp;#34;,构造5个字符&amp;#39;2&amp;#39;连接成的字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//6.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//结果为&amp;#34;3456789&amp;#34;,截取第三个元素(2对应第三位)到最后
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;简单使用&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 02</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-02/</link>
       <pubDate>Tue, 21 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-02/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;二stack&#34;&gt;二、Stack&lt;/h3&gt;
+&lt;h4 id=&#34;21-介绍&#34;&gt;2.1 介绍&lt;/h4&gt;
+&lt;p&gt;栈作为数据结构中的一种，是STL实现的一个先进先出，后进后出的容器。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//头文件添加
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;stack&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//声明
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//node是结构体类型
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;22-方法函数&#34;&gt;2.2 方法函数&lt;/h4&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;代码&lt;/th&gt;
+          &lt;th&gt;含义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;s.push(ele)&lt;/td&gt;
+          &lt;td&gt;元素ele入列，增加元素O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;s.pop()&lt;/td&gt;
+          &lt;td&gt;移出栈顶元素O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;s.top()&lt;/td&gt;
+          &lt;td&gt;取得栈顶元素（但是不删除）O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;s.empty()&lt;/td&gt;
+          &lt;td&gt;检测栈内是否为空，空为真O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;s.size()&lt;/td&gt;
+          &lt;td&gt;返回栈内元素个数O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;23-栈遍历&#34;&gt;2.3 栈遍历&lt;/h4&gt;
+&lt;h5 id=&#34;231-栈遍历&#34;&gt;2.3.1 栈遍历&lt;/h5&gt;
+&lt;p&gt;栈只能对栈顶元素进行操作，如果想要进行遍历，只能将栈中元素一个个取出来存在数组中&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 03</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-03/</link>
       <pubDate>Tue, 21 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-03/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;三queue&#34;&gt;三、queue&lt;/h3&gt;
+&lt;h4 id=&#34;31-介绍&#34;&gt;3.1 介绍&lt;/h4&gt;
+&lt;p&gt;队列是一种先进先出的数据结构。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//头文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;queue&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//定义初始化
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;queue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-方法函数&#34;&gt;3.2 方法函数&lt;/h4&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;代码&lt;/th&gt;
+          &lt;th&gt;含义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.front()&lt;/td&gt;
+          &lt;td&gt;返回队首元素O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.back()&lt;/td&gt;
+          &lt;td&gt;返回队尾元素，O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.push(element)&lt;/td&gt;
+          &lt;td&gt;尾部添加一个元素element进队O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.pop()&lt;/td&gt;
+          &lt;td&gt;删除第一个元素 出队O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.size()&lt;/td&gt;
+          &lt;td&gt;返回队列中元素个数，返回值unsigned int，O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;q.empty()&lt;/td&gt;
+          &lt;td&gt;判断是否为空，队列为空，返回true,O(1)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;33-队列模拟&#34;&gt;3.3 队列模拟&lt;/h4&gt;
+&lt;p&gt;使用**q[]**数组模拟队列&lt;/p&gt;</description>
     </item>
     <item>
       <title>STL学习 01</title>
       <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-01/</link>
       <pubDate>Mon, 20 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-01/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;一vector&#34;&gt;一、vector&lt;/h3&gt;
+&lt;h4 id=&#34;11-介绍&#34;&gt;1.1 介绍&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;vector&lt;/strong&gt;为可变长数组（动态数组），定义的&lt;strong&gt;vector&lt;/strong&gt;数组可以随时添加数值和删除元素。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：在局部区域中（比如局部函数里面）开vector数组，是在堆空间里开的。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习05</title>
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A005/</link>
       <pubDate>Sun, 19 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A005/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;侯捷c面向对象编程下课程打卡-day5&#34;&gt;侯捷C++面向对象编程（下）课程打卡 Day5&lt;/h3&gt;
+&lt;h4 id=&#34;1-转换&#34;&gt;1 转换&lt;/h4&gt;
+&lt;h5 id=&#34;11-转换函数&#34;&gt;1.1 转换函数&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;将当前对象的类型转换成其他类型&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以&lt;strong&gt;operator&lt;/strong&gt;开头，函数名称为需要转换的类型，无参数&lt;/li&gt;
+&lt;li&gt;前面无需写返回类型，编译器会自动根据函数名称进行补充&lt;/li&gt;
+&lt;li&gt;转换函数中，分子分母都没有改变，所有通常加&lt;strong&gt;const&lt;/strong&gt;\&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// class Fraction里的一个成员函数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;operator&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m_numerator&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m_denominator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Fraction&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//编译器自动调用转换函数将f转换为0.6
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;12-non-explicit-one-argument-ctor&#34;&gt;1.2 non-explicit-one-argument ctor&lt;/h6&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;将其他类型的对象转换为当前类型&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习06</title>
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A006/</link>
       <pubDate>Sun, 19 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A006/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;侯捷c面向对象编程下课程打卡-day6&#34;&gt;侯捷C++面向对象编程（下）课程打卡 Day6&lt;/h3&gt;
+&lt;h4 id=&#34;4-specialization-特化&#34;&gt;4. specialization 特化&lt;/h4&gt;
+&lt;h5 id=&#34;41-全特化-full-specialization&#34;&gt;4.1 全特化 full specialization&lt;/h5&gt;
+&lt;p&gt;模板是&lt;em&gt;泛化&lt;/em&gt;，特化是泛化的反面，可以针对&lt;a href=&#34;https://so.csdn.net/so/search?q=%E4%B8%8D%E5%90%8C%E7%9A%84&amp;amp;spm=1001.2101.3001.7020&#34;&gt;不同的&lt;/a&gt;类型，来设计不同的东西&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其语法为&lt;code&gt;template&amp;lt;&amp;gt;&lt;/code&gt; &lt;code&gt;struct xxx&amp;lt;type&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;hash&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;size_t&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;operator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;hash&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;size_t&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;operator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;这里编译器就会用 &lt;code&gt;int&lt;/code&gt; 的那段代码；注意：&lt;code&gt;hash&amp;lt;int&amp;gt;()&lt;/code&gt; 是创建临时变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hash&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;42-偏特化-partial-specialization&#34;&gt;4.2 偏特化 partial specialization&lt;/h5&gt;
+&lt;h6 id=&#34;421-个数上的偏&#34;&gt;4.2.1 个数上的偏&lt;/h6&gt;
+&lt;p&gt;例如：第一个&lt;a href=&#34;https://so.csdn.net/so/search?q=%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B0&amp;amp;spm=1001.2101.3001.7020&#34;&gt;模板参数&lt;/a&gt;我想针对 &lt;code&gt;bool&lt;/code&gt; 特别设计&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习04</title>
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A004/</link>
       <pubDate>Sat, 18 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A004/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;侯捷c面向对象编程上课程打卡-day4&#34;&gt;侯捷C++面向对象编程（上）课程打卡 Day4&lt;/h3&gt;
+&lt;h4 id=&#34;8-静态-模板-namespace&#34;&gt;8、 静态 模板 namespace&lt;/h4&gt;
+&lt;h5 id=&#34;81-static&#34;&gt;8.1 static&lt;/h5&gt;
+&lt;p&gt;对于非静态的函数和数据：&lt;/p&gt;
+&lt;p&gt;非静态的成员函数通过&lt;strong&gt;this&lt;/strong&gt;指针来处理不同的数据（一份函数&amp;ndash;&amp;gt;多个对象）&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;img&#34; loading=&#34;lazy&#34; src=&#34;https://raw.githubusercontent.com/PLUS-WAVE/blog-image/master/img/blog/2023-08-02/image-20230731154446361.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image-20230731154548833&#34; loading=&#34;lazy&#34; src=&#34;https://raw.githubusercontent.com/PLUS-WAVE/blog-image/master/img/blog/2023-07-31/image-20230731154548833.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于静态的函数和数据：&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习03</title>
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A003/</link>
       <pubDate>Fri, 17 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A003/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;侯捷c面向对象编程上课程打卡-day3&#34;&gt;侯捷C++面向对象编程（上）课程打卡 Day3&lt;/h3&gt;
+&lt;h4 id=&#34;5操作符重载与临时对象&#34;&gt;5、操作符重载与临时对象&lt;/h4&gt;
+&lt;h5 id=&#34;51操作符重载&#34;&gt;5.1操作符重载&lt;/h5&gt;
+&lt;p&gt;在C++中，我们可以定义加法等操作符，比如我们可以定义两个是石头的加法&lt;/p&gt;
+&lt;h6 id=&#34;511成员函数实现&#34;&gt;5.1.1成员函数实现&lt;/h6&gt;
+&lt;p&gt;成员函数： &lt;strong&gt;complex :: function &amp;hellip;&amp;hellip;&lt;/strong&gt; 前面带有class的名称（在class里事先声明了的）&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习02</title>
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A002/</link>
       <pubDate>Thu, 16 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A002/</guid>
-      <description></description>
+      <description>&lt;h4 id=&#34;2构造函数&#34;&gt;2、构造函数&lt;/h4&gt;
+&lt;h5 id=&#34;21-inline函数&#34;&gt;2.1 inline函数&lt;/h5&gt;
+&lt;p&gt;&lt;img alt=&#34;img&#34; loading=&#34;lazy&#34; src=&#34;https://raw.githubusercontent.com/PLUS-WAVE/blog-image/master/img/2023-07-13-20-04-44-image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;定义类的时候，可以直接在body中定义函数（inline函数，在body中定义完成），也可以只是在body中声明函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;inline内联函数：如果定义的函数是内联函数，那么会运行比较快，尽可能定义为内联函数&lt;/p&gt;</description>
     </item>
     <item>
       <title>C&#43;&#43;学习01</title>
