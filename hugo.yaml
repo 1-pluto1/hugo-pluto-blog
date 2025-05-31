@@ -1,9 +1,10 @@
 # 起始 URL（换成您自己的域名）
 baseURL: https://uestcyz.top/
 # 网站标题
-title: 'Pluto\'s Blog'
-# 每页显示的文章数量
-paginate: 7
+title: "Pluto's blog"
+# 分页配置
+pagination:
+  pagerSize: 7
 # 主题名称
 theme: PaperMod
 # 语言代码（zh-简体中文）
@@ -57,7 +58,7 @@ params:
   # 默认主题
   defaultTheme: auto # dark, light
   # 是否启用主题切换按钮
-  disableThemeToggle: true
+  disableThemeToggle: false
   # 是否启用阅读时间展示
   ShowReadingTime: true
   # 是都启用分享按钮
@@ -82,7 +83,7 @@ params:
   # 是否隐藏文章摘要
   hideSummary: false
   # 是否显示目录
-  showtoc: false
+  showtoc: true
   # 是否默认展开文章目录
   tocopen: false
 
@@ -102,6 +103,7 @@ params:
     text: 'Pluto'
     # 网站 Logo 图片（/static 下面的文件名称）
     icon: https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/null-20a43f960b8c8f08.jpg
+    
     # 图标高度
     iconHeight: 35
 
@@ -114,28 +116,43 @@ params:
     imageUrl: https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/null-20a43f960b8c8f08.jpg
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: 
     buttons:
-      - name: Posts
-        url: posts
+
+      - name: Archives
+        url: "/archives"
       - name: Tags
-        url: tags
+        url: "/tags"
+      - name: Search
+        url: "/search"
+
+
 
   # 主页 - 信息模式（默认）
   homeInfoParams:
     Title: "Hi there \U0001F44B"
     Content: Welcome to hugo start, this is a example of Hugo and PaperMod
 
-  #  主页 - 信息模式 图标展示
+  #  联系方式图标 - 显示在Profile模式头像下方
   socialIcons:
-    # - name: twitter
-    #   url: "https://twitter.com/"
-    # - name: stackoverflow
-    #   url: "https://stackoverflow.com"
     - name: github
-      url: 'https://github.com/DejavuMoe/hugo-start'
-    - name: mastodon
-      url: 'https://sink.love/@dejavu'
+      url: 'https://github.com/1-pluto1'
+      title: 'GitHub Profile'
+    - name: email
+      url: 'mailto:im.yang.zhao.edu@gmail.com'
+      title: 'Email Me'
+    - name: qq
+      url: 'tencent://message/?uin=1815017031'
+      title: 'QQ Chat'
+    - name: wechat
+      url: 'https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/443E347C13A787C5F7DB59948B0B130A.png'
+      title: 'WeChat: Yz15760330138'
+    - name: leetcode
+      url: 'https://leetcode.cn/u/ji-liu-nian-9/'
+      title: 'LeetCode Profile'
+
+
+
 
   # 站长验证
   analytics:
@@ -154,7 +171,7 @@ params:
 
   # 关联编辑
   editPost:
-    URL: 'https://github.com/DejavuMoe/hugo-start/edit/master/content/posts'
+    URL: 'https://github.com/1-pluto1/hugo-pluto-blog/edit/main/content/post'
     Text: 'Edit on GitHub' # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -165,29 +182,37 @@ params:
     shouldSort: true
     location: 0
     distance: 1000
-    threshold: 0.4
+    threshold: 0.5
     minMatchCharLength: 0
     keys: ['title', 'permalink', 'summary', 'content']
 
 # 顶部导航栏
 menu:
   main:
-    - identifier: '首页'
-      name: '首页'
+    - identifier: 'home'
+      name: 'Home'
       url: /
       weight: 1
-    - identifier: '分类'
-      name: '分类'
+    - identifier: 'categories'
+      name: 'Categories'
       url: /categories/
       weight: 10
-    - identifier: '标签'
-      name: '标签'
+    - identifier: 'tags'
+      name: 'Tags'
       url: /tags/
       weight: 20
-    - identifier: '仓库'
-      name: '仓库'
-      url: https://github.com/DejavuMoe/hugo-start
+    - identifier: 'repository'
+      name: 'GitHub'
+      url: https://github.com/1-pluto1/
       weight: 30
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
@@ -205,7 +230,7 @@ privacy:
     enableDNT: true
     simple: true
 
-  twitter:
+  x:
     disabled: true
     enableDNT: true # 是否启用添加"请勿跟踪" HTTP 头。
     simple: true # 如果启用简单模式，将建立一个静态的、无 JS 版本的推文。
@@ -221,5 +246,5 @@ privacy:
 services:
   instagram:
     disableInlineCSS: true # 禁用 Hugo 提供的内联样式
-  twitter:
+  x:
     disableInlineCSS: true # 禁用 Hugo 提供的内联样式
