@@ -85,5 +85,12 @@
       <description>&lt;p&gt;faasdfhafuafpaweofuapweuf&lt;/p&gt;
 &lt;p&gt;ca;hfaf&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>My 1st post</title>
+      <link>http://localhost:1313/post/amazing/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/amazing/</guid>
+      <description>&lt;p&gt;f;aa;sfja;fjaeofjao&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
