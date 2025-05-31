@@ -2,65 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/post/111/</loc>
-    <lastmod>2025-06-01T02:08:26+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/test/</loc>
-    <lastmod>2025-06-01T00:49:29+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/test02/</loc>
-    <lastmod>2025-06-01T01:57:27+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
+    <lastmod>2025-06-01T03:44:26+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/process/</loc>
-    <lastmod>2025-06-01T02:08:26+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/test/</loc>
-    <lastmod>2025-06-01T02:12:28+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/test03/</loc>
-    <lastmod>2025-06-01T02:08:26+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/til/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/trd/</loc>
-    <lastmod>2025-06-01T02:08:26+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/%E5%85%A8%E6%B5%81%E7%A8%8B/</loc>
-    <lastmod>2025-03-13T14:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2025-03-13-build-til-blog-by-hugo/</loc>
-    <lastmod>2025-06-01T02:08:37+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/555/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/final02/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/final/</loc>
-    <lastmod>2025-06-01T02:12:28+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/hfafha/</loc>
-    <lastmod>2025-06-01T02:12:28+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/first/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/amazing/</loc>
-    <lastmod>2025-06-01T04:21:46+08:00</lastmod>
+    <lastmod>2023-04-08T11:30:03+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
     <lastmod>2025-06-01T03:44:26+08:00</lastmod>
@@ -69,5 +15,7 @@
   </url><url>
     <loc>http://localhost:1313/search/</loc>
     <lastmod>2025-06-01T03:44:26+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

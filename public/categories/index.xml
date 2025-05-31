@@ -11,6 +11,42 @@
     </image>
     <generator>Hugo -- 0.147.3</generator>
     <language>zh</language>
+    <lastBuildDate>Sat, 08 Apr 2023 11:30:03 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm</title>
+      <link>http://localhost:1313/categories/algorithm/</link>
+      <pubDate>Sat, 08 Apr 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Library</title>
+      <link>http://localhost:1313/categories/library/</link>
+      <pubDate>Fri, 24 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/library/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming Language</title>
+      <link>http://localhost:1313/categories/programming-language/</link>
+      <pubDate>Fri, 24 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/programming-language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/categories/blog/</link>
+      <pubDate>Sun, 15 Jan 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/categories/tutorial/</link>
+      <pubDate>Sun, 15 Jan 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/categories/tutorial/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

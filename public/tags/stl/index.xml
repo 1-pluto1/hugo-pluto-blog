@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>STL on Pluto&#39;s blog</title>
+    <link>http://localhost:1313/tags/stl/</link>
+    <description>Recent content in STL on Pluto&#39;s blog</description>
+    <image>
+      <title>Pluto&#39;s blog</title>
+      <url>http://localhost:1313/opengraph.webp</url>
+      <link>http://localhost:1313/opengraph.webp</link>
+    </image>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 24 Mar 2023 11:30:03 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/stl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STL学习 07</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-07/</link>
+      <pubDate>Fri, 24 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-07/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 06</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-06/</link>
+      <pubDate>Thu, 23 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-06/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 04</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-04/</link>
+      <pubDate>Wed, 22 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-04/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 05</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-05/</link>
+      <pubDate>Wed, 22 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-05/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 02</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-02/</link>
+      <pubDate>Tue, 21 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 03</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-03/</link>
+      <pubDate>Tue, 21 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-03/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STL学习 01</title>
+      <link>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-01/</link>
+      <pubDate>Mon, 20 Mar 2023 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/post/programming-language/stl%E5%AD%A6%E4%B9%A0-01/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
