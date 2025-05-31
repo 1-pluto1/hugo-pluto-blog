@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-31T23:41:18+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-05-31T23:41:18+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url>
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://hugo-pluto-blog.pages.dev/post/test/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/post/test02/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/tags/hugo/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/post/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/tags/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/tags/til/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/post/2025-03-13-build-til-blog-by-hugo/</loc><lastmod>2025-03-13T14:00:00+08:00</lastmod></url><url><loc>https://hugo-pluto-blog.pages.dev/categories/</loc></url></urlset>
