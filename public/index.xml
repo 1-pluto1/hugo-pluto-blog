@@ -373,7 +373,12 @@
       <link>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A001/</link>
       <pubDate>Wed, 15 Mar 2023 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/post/programming-language/c&#43;&#43;%E5%AD%A6%E4%B9%A001/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;侯捷c面向对象编程上课程打卡-day1&#34;&gt;侯捷C++面向对象编程（上）课程打卡 Day1&lt;/h3&gt;
+&lt;h4 id=&#34;1头文件与类的声明&#34;&gt;1、头文件与类的声明&lt;/h4&gt;
+&lt;h5 id=&#34;11-c-vs-c&#34;&gt;1.1 C vs C++&lt;/h5&gt;
+&lt;p&gt;&lt;img alt=&#34;img&#34; loading=&#34;lazy&#34; src=&#34;https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/2023-07-13-20-02-37-image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C语言中，Data和函数是分别定义，根据类型创建的。这样建立的变量为全局变量。&lt;/p&gt;
+&lt;p&gt;C++中，将Data和函数包含在一起形成类。使用类实例化出一个对象，即为面向对象。类中的数据和函数都是局部的，不是全局的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello, Hugo</title>
