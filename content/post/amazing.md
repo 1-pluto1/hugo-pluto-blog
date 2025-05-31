@@ -3,11 +3,10 @@ title: My 1st post
 date: 2020-09-15T11:30:03+00:00
 tags:
   - first
-author: Me
+author: ZhaoYang
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
-comments: false
 disableShare: false
 hideSummary: false
 searchHidden: true
