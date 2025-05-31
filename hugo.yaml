@@ -54,7 +54,7 @@ params:
   # OpenGraph / Twitter Card 预览图片（/static 下面的文件名称）
   images: ['opengraph.webp']
   # 日期格式
-  DateFormat: '2023-01-02'
+  DateFormat: '2006年01月02日'
   # 默认主题
   defaultTheme: auto # dark, light
   # 是否启用主题切换按钮
