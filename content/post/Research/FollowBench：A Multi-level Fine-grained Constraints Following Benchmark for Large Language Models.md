@@ -189,7 +189,8 @@ Level 5: 推荐10本中文书，按年份排序，用表格展示，包含评价
 
 #### 我们的解决方案：过程透明化
 
-![约束演化路径示例](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NGM0NzhhZmIzMTVkN2NlODg5NjNkMDVkM2JmNjkyNDVfRThubkFPSm95Rm8yNVVqaHZnWnRLOEN6TFFCcGdnOUFfVG9rZW46UG1mbGJ6YXRKb1h1U3N4WlVDMmNRcVlFbmRmXzE3NDg3NTczMzI6MTc0ODc2MDkzMl9WNA)
+![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151453189.png)
+
 
 我们向评估模型展示**指令的演化过程**：
 
@@ -247,7 +248,8 @@ $$\text{CSL} = \frac{1}{g} \sum_{i=1}^{g} \arg\max_{l} \left( l \times \prod_{n=
 
 ### 主要发现二：约束类型的难度差异
 
-![约束类型性能对比](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FjNjA5ZGFiMDhiNjlhZGQ0ODExOGE2ODUwZTIxNGJfZHNZTlo4SXNqOTFpQU9EbXVaM0NzaEVQZmswekRiQzBfVG9rZW46SWJTSmJnWVg4b3haYW14MTZ5dWNhMUFabmtkXzE3NDg3NTczMzI6MTc0ODc2MDkzMl9WNA)
+![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151541568.png)
+
 
 **相对容易的约束**：
 - **风格约束**：大多数模型都能较好地调整语言风格
@@ -277,7 +279,8 @@ $$\text{CSL} = \frac{1}{g} \sum_{i=1}^{g} \arg\max_{l} \left( l \times \prod_{n=
 
 ### 主要发现四：解码策略的微妙影响
 
-![温度参数对性能的影响](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=OGQ5NzRjMTk0ZDM4ZTIzNzQ3MzEwNjdjODgwYjMxZDBfdnRsdnNidGtyem5OQnpvRERXMXU5eE9NajdDbEU2a05fVG9rZW46RldMaGJLVXc4b1g5STB4d292UmNBVjVRbmtjXzE3NDg3NTczMzI6MTc0ODc2MDkzMl9WNA)
+![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151625380.png)
+
 
 **有趣发现**：
 - **温度过低（τ=0）**：输出过于保守，可能错过复杂约束的细节
