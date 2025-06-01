@@ -27,7 +27,8 @@ UseHugoToc: true
 
 **通俗的讲**，PnP问题就是在已知世界坐标系下N个空间点的真实坐标以及这些空间点在图像上的投影，如何计算相机所在的位姿。其中，已知量是空间点的真实坐标和图像坐标，未知量（求解量）是相机的位姿。
 
-![image-20231120125945905](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120125945905.png)
+![image-20231120125945905.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120125945905.png)
+
 
 
 
@@ -82,9 +83,7 @@ e.g.图score=66 = 2 * 1 + 22 * 4+23 * 6，即
 二级网格所有点分布在4个网格
 
 三级网格中分布在6个网格
-
-![image-20231120130331145](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120130331145.png)
-
+![image-20231120130331145.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120130331145.png)
 
 
 ##### (3)结合代码分析
@@ -143,7 +142,8 @@ PnP问题是在已知n 个 3D 空间点以及它们的投影位置时估计相�
 
 我们可以设想以下场景，设相机位于点OC，P1、P2、P3……为特征点。
 
-![image-20231120171247219](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120171247219.png)
+![image-20231120171247219.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120171247219.png)
+
 
 ###### （2）算法数学推导
 
@@ -151,41 +151,39 @@ PnP问题是在已知n 个 3D 空间点以及它们的投影位置时估计相�
 
 数学推导的一些变量设定，采用余弦定理得到如下方程：
 
-![image-20231120171517847](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120171517847.png)
+![image-20231120171517847.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120171517847.png)
 
 
 
-![image-20231120171534997](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120171534997.png)
+
+![image-20231120171534997.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120171534997.png)
+
 
 作者设定的"reality conditions"，如果满足条件就称解集为"physical solutions"(物理解):
 
 
+![image-20231120171604265.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120171604265.png)
 
-![image-20231120171604265](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120171604265.png)
 
 
 
 进行化简，通过变量的代换来将 （1）式化为（3）式，（3）式通过消元法转化为（4），（4）与（1）具有相同数量的物理解。现在，P3P问题被简化为寻找两个二次方程的正解。因此，我们得到了以下结果：P3P问题要么有无穷多个解，要么最多有四个物理解。
 
-![image-20231120171947581](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120171947581.png)
+![image-20231120171947581.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120171947581.png)
+
 
 
 
 然后使用Wu-Ritt’s zero decomposition method来求解方程，得到X、Y、Z的值，P3P算法的总体计算流程如下：
+![image-20231120195028189.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120195028189.png)
 
-
-
-
-
-![image-20231120195028189](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120195028189.png)
 
 
 
 得到X、Y、Z的值后，利用三角形相似的原理，得到A、B、C三点在相机坐标系下的坐标，过程如下：
 
+![image-20231120195051211.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120195051211.png)
 
-
-![image-20231120195051211](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120195051211.png)
 
 
 
@@ -198,8 +196,7 @@ PnP问题是在已知n 个 3D 空间点以及它们的投影位置时估计相�
 
 
 另外，对于夹角余弦值的求解如下：
-
-![image-20231120195120771](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120195120771.png)
+https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120195051211.png
 
 
 
@@ -207,9 +204,8 @@ PnP问题是在已知n 个 3D 空间点以及它们的投影位置时估计相�
 
 P3P算法的过程和优缺点如下：
 
+![image-20231120195130671.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231120195130671.png)
 
-
-![image-20231120195130671](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231120195130671.png)
 
 ##### （二）colmap P3P 代码分析。结合论文，将其算法流程分析清楚。
 
@@ -581,12 +577,10 @@ void ComputeSquaredReprojectionError(
 
 
 
+![image-20231123140518128.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231123140518128.png)
+
+![image-20231123140536083.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231123140536083.png)
 
 
-![image-20231123140518128](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231123140518128.png)
 
-![image-20231123140536083](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231123140536083.png)
-
-![image-20231123140549415](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20231123140549415.png)
-
-
+![image-20231123140549415.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20231123140549415.png)
