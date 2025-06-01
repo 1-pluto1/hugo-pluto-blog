@@ -5,6 +5,8 @@ tags:
   - LLM
   - NLP
   - ReasoningModel
+  - TODO
+  - MATH
 categories:
   - AI
   - Research
@@ -25,3 +27,4 @@ UseHugoToc: true
 
 施工中
 
+论文翻译：https://dppemvhuzp.feishu.cn/docx/Rp4YdgRXAohJBaxWqL7cO9FPnJf?from=from_copylink

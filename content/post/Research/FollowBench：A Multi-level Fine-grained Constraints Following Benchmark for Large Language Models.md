@@ -31,7 +31,9 @@ UseHugoToc: true
 
 ### Introduction
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQyMTkyZTY5NWMwZGRiMDQ0N2E2NmMyYWFhYmNlZmNfdVBYaDRMZnNHSFhXWVZZNm1iN2dUME8xMlpzZE5LcUVfVG9rZW46TEtkWGJKd3Ztb05rS0V4a3FLSmM2OGZNbmRnXzE3NDg3NTczMzI6MTc0ODc2MDkzMl9WNA)
+![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601143950541.png)
+
+
 
 大型语言模型（LLMs）（Brown 等，2020；OpenAI，2022）在互联网规模语料库上进行预训练后，已展现出生成流畅且逼真文本的能力。然而，现实场景中的人类指令不仅要求模型生成的文本具有高度的自然性，还需遵循特定的约束条件（Yang 等，2023）。例如，模型可能需要推荐十本专门用中文撰写的书籍（图1），或者被期望生成具有特定语气的回应。
 
@@ -51,7 +53,8 @@ UseHugoToc: true
 
 现有研究在评估大语言模型（LLMs）对特定任务的指令遵循能力方面已取得多项进展。Tang等人（2023）聚焦于评估LLMs生成复杂结构化表格数据的能力，涵盖文本、HTML和Latex格式。他们首先从现有自然语言处理基准和网站中收集表格数据，随后基于这些数据构建指导性指令。Chen等人（2022）则评估LLMs是否能够遵循特定知识密集型生成指令，其方法为先提供示例列表（如英国体育明星名单），随后设置与示例相矛盾的约束条件（如不得提及任何运动员）。这些基准测试仅能展示LLMs在特定类型指令下的遵循能力。相比之下，FollowBench全面涵盖了包含五种不同类型细粒度约束的多难度层级指令，能够为现有LLMs提供全面且精确的指令遵循能力评估。关于LLM评估的更多细节，可参考近期综述文献（Chang等人，2023；Wang等人，2023b）。
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=N2NmNDU3ZWZiOWY4N2IwMGRhNGJkY2RkNzExZmQzNDNfTlNlb2JRRWtFek84blk1Tk4wRElKeW9kWm1SY21UZjNfVG9rZW46VW51aGJQeGtvb0Z6NG94aXZKQ2M4TjllbjRmXzE3NDg3NTczMzI6MTc0ODc2MDkzMl9WNA)
+![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601144100221.png)
+
 
 ### FollowBench
 
