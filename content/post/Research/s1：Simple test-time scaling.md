@@ -210,3 +210,6 @@ UseHugoToc: true
 生成思维链的从Gemini换到了DeepSeek R1
 
 ![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=OGM4OTMwMzUxZjhlZjg5NTBiZTJlMTAzYjg3OGI1YTBfMDN4QkhUZWNWVlk4azRCb2Y5ajM2blBvVlludmhWMTZfVG9rZW46Q2g3bWI0Zjl4b2JnZzh4enVtbmNiaU1CblhlXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+
+
+论文翻译：https://dppemvhuzp.feishu.cn/docx/PUIYdB8AioEiAWxmbqXcJMCnnOS?from=from_copylink

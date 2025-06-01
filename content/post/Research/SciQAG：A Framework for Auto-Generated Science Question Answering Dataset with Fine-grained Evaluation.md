@@ -154,3 +154,6 @@ SciQAG的核心思想是利用大型语言模型(LLM)强大的理解和生成能
 ### 总结后记
 
 本论文针对大规模科学问答数据集构建问题,提出了一种名为SciQAG的自动生成框架。该框架利用种子问答引导LLMs生成更多问答数据,并设计了一个五维度的RACAR指标用于自动评估生成的问答质量。实验结果表明,SciQAG生成的96万个科学问答对在RACAR指标上平均得分达到2.5分(满分3分),证明了该框架能大规模生成高质量的科学领域问答数据。
+
+
+论文翻译：https://dppemvhuzp.feishu.cn/docx/BYR6d11x4of5pgxyolxcV0monVz?from=from_copylink

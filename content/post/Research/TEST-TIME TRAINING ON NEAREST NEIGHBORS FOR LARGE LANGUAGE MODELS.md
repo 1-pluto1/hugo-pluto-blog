@@ -61,3 +61,5 @@ Note：索引质量和索引大小很重要！！！
 3. 缓解数据源对少数群体的偏差（这块放到cv可能会更好？比如黑人的人脸识别准确率不高）
     
 4. 通过测试时叠加来自可信数据源的数据，帮助环节对抗性行为，包括数据投毒攻击。
+
+论文翻译：https://dppemvhuzp.feishu.cn/docx/OwFzdf6gtois39xF9oQctf9QnKJ?from=from_copylink
