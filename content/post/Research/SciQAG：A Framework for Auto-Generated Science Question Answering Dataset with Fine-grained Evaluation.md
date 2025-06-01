@@ -73,7 +73,7 @@ SciQAG的核心思想是利用大型语言模型(LLM)强大的理解和生成能
 
 论文提出了一种名为SciQAG的框架,用于从科学文献中自动生成高质量的问答(QA)对。该框架由三个主要步骤组成:种子QA生成、科学QA生成和QA评估。
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM0ZDE0YTgzMWYwYzI2YjExNmNkMGFlZDE2OTEyOWVfQmgyWXNGSmhjYTNiMWw4OUFXQkVhemxLV0txMmMwSVZfVG9rZW46TGdaYWJrRWFFbzdpU0t4Ukx4d2NONHVybm1iXzE3NDg3NTkwMTg6MTc0ODc2MjYxOF9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY1Yzk1MDU2YTM3YzMyY2ZiYWQ1YWNmM2RiZTY5ZjlfanJEcDU5aUNKVWpXRnM3ME1jMkFoUkdpdEc3Y01xV1RfVG9rZW46TGdaYWJrRWFFbzdpU0t4Ukx4d2NONHVybm1iXzE3NDg3NjMyNTI6MTc0ODc2Njg1Ml9WNA)
 
 #### 种子QA生成
 
@@ -141,15 +141,15 @@ SciQAG的核心思想是利用大型语言模型(LLM)强大的理解和生成能
 
 ### 实验
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJiOTQ5ZWQzMjQzODJmMmY2N2FhZThmYjI5NzgwMjNfQ2F2RVFnV3c0cHpoZDhPeGFWVVpTWHkyWE9od3VlOXNfVG9rZW46VGxWS2JVR3BIbzRLZWt4TjdxWWNZcjFlbjNiXzE3NDg3NTkwMTg6MTc0ODc2MjYxOF9WNA)
 
-  
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=OWU2YmJjNzgxMDM0ZTYzZWI1MDQzZDQzYmQ0ZDZkYTFfRW5PSm84enZsRUJkb09EUXlRZElMNE1ZOGRVdWp5RUNfVG9rZW46VGxWS2JVR3BIbzRLZWt4TjdxWWNZcjFlbjNiXzE3NDg3NjMyNzI6MTc0ODc2Njg3Ml9WNA)
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NGUwYjgzNGRjMDZlYjQwZGU1NGE5MGRkN2Q2ODJmZjhfZmE4c1lycVM0ZXZqd2N6d3R0QkRLZEk4emNheDY5U2RfVG9rZW46T2ZmeGJTMkdpb3lDbEd4R2ZQWmNOSGhJbkdjXzE3NDg3NTkwMTg6MTc0ODc2MjYxOF9WNA)
 
-  
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MTBkYzI2MGFlMzYzOWE0NWRkOGY1YzU1MmRkODY5OTBfOURZM3dmU2RCQmtsOFVaZHhjdWh4bWNnUWRadjlLeGJfVG9rZW46T2ZmeGJTMkdpb3lDbEd4R2ZQWmNOSGhJbkdjXzE3NDg3NjMyODE6MTc0ODc2Njg4MV9WNA)
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YjMzYmFkOTA2MzkwYzdlMzkwMzFiYTdmNDBhMmQ5NzNfQlFwUjFDVjdmYklPQXVXSEhDNXhHYXI0STdxMUl5a2dfVG9rZW46VjlUSmJITFdnbzBwa2l4bTIyVWNyMWlIbkFPXzE3NDg3NTkwMTg6MTc0ODc2MjYxOF9WNA)
+
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NGQ1M2NmYzViMTRiNzgxYTljMTllMDYyMmVlZWU3N2NfVG8ySkZNVmdkVldmcGh4cXZmS1JOcFdQWWlnUGdGaUNfVG9rZW46VjlUSmJITFdnbzBwa2l4bTIyVWNyMWlIbkFPXzE3NDg3NjMyODk6MTc0ODc2Njg4OV9WNA)
+
 
 ### 总结后记
 
