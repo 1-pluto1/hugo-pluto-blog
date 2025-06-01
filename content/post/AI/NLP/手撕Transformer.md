@@ -123,7 +123,9 @@ def get_attn_subsequent_mask(seq):
 
 在Transformer中, 使用的是绝对位置编码, 用于传输给模型Self - Attention所不能传输的位置信息, 编码使用正余弦公式实现:
 
-![image-20240919133817012](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20240919133817012.png)
+![image-20240919133817012.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20240919133817012.png)
+
+
 
 ```python
 class PositionalEncoding(nn.Module):
@@ -148,13 +150,15 @@ class PositionalEncoding(nn.Module):
         
 ```
 
-![image-20240919171506817](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20240919171506817.png)
+![image-20240919171506817.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20240919171506817.png)
+
 
 ##### Feed Forward Neural Network
 
 在Transformer中, Encoder或者Decoder每个Block都需要用一个前馈神经网络来添加**非线性**:
 
-![image-20240919171536276](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20240919171536276.png)
+![image-20240919171536276.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20240919171536276.png)
+
 
 注意, 这里它们都是有偏置的, 而且这两个Linear可以用两个1×1 的卷积来实现:
 
@@ -192,7 +196,8 @@ class FeedForwardNetwork(nn.Module):
 
 多头注意力是多个不同的头来获取不同的特征, 类似于多个**卷积核**所达到的效果. 在计算完后通过一个Linear调整大小:
 
-![image-20240919172049566](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20240919172049566.png)
+![image-20240919172049566.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20240919172049566.png)
+
 
 多头注意力在Encoder和Decoder中的使用略有区别, 主要区别在于Mask的不同. 我们前面已经实现了两种Mask函数, 在这里会用到.
 
@@ -237,7 +242,8 @@ class MultiHeadAttention(nn.Module):
 ##### Scaled DotProduct Attention
 
 Tranformer中非常重要的概念, 缩放点积注意力, 公式如下:
-![image-20240919173831098](C:\Users\Pluto\AppData\Roaming\Typora\typora-user-images\image-20240919173831098.png)
+![image-20240919173831098.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/image-20240919173831098.png)
+
 实现起来非常简单, 只需要把Q, K两个矩阵一乘, 然后再缩放, 过一次Softmax, 再和V乘下:
 
 ```python
