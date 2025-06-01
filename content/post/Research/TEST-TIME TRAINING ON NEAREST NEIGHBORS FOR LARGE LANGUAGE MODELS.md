@@ -41,7 +41,7 @@ Note：索引质量和索引大小很重要！！！
 2. 在Pile基准测试的22个任务上进行评估，发现拥有20个邻居之后已经实现了大多数的增益（对训练期间没有见过的任务的网络带来的改进可能是显著的，对见过的任务有改进，但是改进的程度比较“温和”）
     
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDBhY2ZiMWIzNzE0ZDZmZWIwMjgzMGE2YWY0OTk5YTNfZmRXb1RLZG1OY2JDQXd1cnF0YlIzYjZWR0xETVdjS0NfVG9rZW46Q0N4dGJNb3NKb0RJaVR4RFhkUGM5OEJ5bnZkXzE3NDg3NTkzNzQ6MTc0ODc2Mjk3NF9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWVkZjJkNzk5NjVmYmNmNzE2NTU0Y2E4NzU3MDllNDlfSkNrd3g1bm9LbmJBSkk4TjF4am10aG5TdlBQWjBpakpfVG9rZW46Q0N4dGJNb3NKb0RJaVR4RFhkUGM5OEJ5bnZkXzE3NDg3NjMzOTI6MTc0ODc2Njk5Ml9WNA)
 
 ## 具体做法：
 
