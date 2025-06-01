@@ -103,5 +103,4 @@ UseHugoToc: true
 
 我们使用监督微调在LIMO数据集上对Qwen2.5-32B-Instruct进行微调。训练过程采用全参数微调，结合DeepSpeed ZeRO-3优化（Rajbhandari等，2020）和FlashAttention2（Dao，2023），序列长度限制为16,384个标记。
 
-##### Evaluation Framework
-
+论文翻译：https://dppemvhuzp.feishu.cn/docx/ECnGdqPhUo9t0QxBRPAcCIfanvf?from=from_copylink
