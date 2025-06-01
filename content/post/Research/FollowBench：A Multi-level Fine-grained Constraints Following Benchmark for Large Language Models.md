@@ -189,7 +189,7 @@ Level 5: 推荐10本中文书，按年份排序，用表格展示，包含评价
 
 #### 我们的解决方案：过程透明化
 
-![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151453189.png)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNhYTJlMDlhOGFjZTQ2NmJmNDBiNDdhNDU1NzUzMjNfTlc5UUNpSFR6UFlzSU4zNnlsS2pYcW9kdDNoSFlPNDhfVG9rZW46SWFodWJpYTcyb09DWHR4cUdmdWNTM1NYblZnXzE3NDg3NjIzODI6MTc0ODc2NTk4Ml9WNA)
 
 
 我们向评估模型展示**指令的演化过程**：
@@ -248,7 +248,7 @@ $$\text{CSL} = \frac{1}{g} \sum_{i=1}^{g} \arg\max_{l} \left( l \times \prod_{n=
 
 ### 主要发现二：约束类型的难度差异
 
-![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151541568.png)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2VmMTBiODcyODQ3NmE1YTBjMTU1MzhlYzhlOGJkOGVfektwM1N2OGVVTUw4b2p3WW94Q1p3T1pzYzBDckFCMUFfVG9rZW46SWJTSmJnWVg4b3haYW14MTZ5dWNhMUFabmtkXzE3NDg3NjIzNjM6MTc0ODc2NTk2M19WNA)
 
 
 **相对容易的约束**：
@@ -279,7 +279,7 @@ $$\text{CSL} = \frac{1}{g} \sum_{i=1}^{g} \arg\max_{l} \left( l \times \prod_{n=
 
 ### 主要发现四：解码策略的微妙影响
 
-![image.png](https://cdn.jsdelivr.net/gh/1-pluto1/blog_imgs/20250601151625380.png)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MDliZjViMTVkNTMyYmZhOWQ3NTRhMTI1ZTljZDhjNGVfbWE0Z3djVW5ZRk90cnBMVnNtdUVjSGdQV21MbkhDbGVfVG9rZW46Q3BzZGJoOGdab3l6SDl4dUZ5cGNPSzJqbm5iXzE3NDg3NjIzMzc6MTc0ODc2NTkzN19WNA)
 
 
 **有趣发现**：
