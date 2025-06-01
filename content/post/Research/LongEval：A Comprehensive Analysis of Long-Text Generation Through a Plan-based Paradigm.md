@@ -40,8 +40,8 @@ UseHugoToc: true
 
 **关键发现**：规划生成显著优于直接生成，模型规模与长文本能力强相关
 
-![LongEval评估框架](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NzgwOThmMWIzMTNlYzUyMTQwNzY2ZmY4OWY0ZjhjODFfUFpZTFdFbEtqalc0NWxnSjJtZGd0b053Rks4WXdVMThfVG9rZW46T1VWOGJ5N2R1b05hMUp4d01US2NIVVlHbktnXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
 
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MWNlNTM0MTY1MGM2MzM4YmM5ZjU3ODA4OTk5ZTg2ZDdfdTN5QUNOY0ZrQ1hBRk1RY2QzcVJiYjV5U2F5SFdyNVJfVG9rZW46WFdZYmJDMm95b3UzUXV4NkxQSWNzQW81bjVkXzE3NDg3NjI1NjA6MTc0ODc2NjE2MF9WNA)
 ## 核心贡献
 
 LongEval为长文本生成评估带来了革命性突破：
@@ -61,7 +61,9 @@ LongEval为长文本生成评估带来了革命性突破：
 
 #### 信息密度vs文本长度的矛盾
 
-![信息密度与文本长度的关系](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ODZiOWNhNzZhNTE2MzhkNjA2ODg4ZWZjY2JhMDE3ZmZfeDlxbGhpQ3FkSzlwcDdCYzVvZDF5OEh5TFUyQWZqSmdfVG9rZW46SWpiMGJhNGJ4b0I2VGt4bnVTN2M2dU00bjBnXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YzA2MDA4NzE5ODE3YTIzMmMxMDM1OTZkY2NmMGJhOTNfQnNSaFdGaEtSNzVHbVgxTTcxdWlNSGFlaWxRZVNtNmJfVG9rZW46T1VWOGJ5N2R1b05hMUp4d01US2NIVVlHbktnXzE3NDg3NjI1OTE6MTc0ODc2NjE5MV9WNA)
+
+
 
 研究发现了一个有趣现象：**文档的信息量与文本长度呈强正相关**。这意味着：
 - 短文本可以"浅尝辄止"
@@ -121,7 +123,7 @@ LongEval为长文本生成评估带来了革命性突破：
 
 ## 技术方法：双范式评估框架
 
-![LongEval双范式框架](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YTEzMWQwMTc3MDhiNDg5Y2I2N2NiZmM2YWUyNGU5YjZfWnV4dXo0Z00xUnByY2NiQkh6TGN2TFhMbTQ5R3l0SnVfVG9rZW46WFdZYmJDMm95b3UzUXV4NkxQSWNzQW81bjVkXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MWNlNTM0MTY1MGM2MzM4YmM5ZjU3ODA4OTk5ZTg2ZDdfdTN5QUNOY0ZrQ1hBRk1RY2QzcVJiYjV5U2F5SFdyNVJfVG9rZW46WFdZYmJDMm95b3UzUXV4NkxQSWNzQW81bjVkXzE3NDg3NjI1NjA6MTc0ODc2NjE2MF9WNA)
 
 ### 范式一：直接生成（端到端挑战）
 
@@ -226,7 +228,8 @@ LongEval为长文本生成评估带来了革命性突破：
 - **维持逻辑结构**：保证章节间的连贯性
 
 #### 信息压缩率（ICR）
-![数据集特征分析](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGM4ZTk4OWVmYWJhZDI2ZWE2M2M5ZWEwMjQ5OTU1M2ZfdVhXb0xJY0w2UnNjaHlRVVl5bDZRVDZYMGN0eUlhcWJfVG9rZW46QmFZMmJuenVBb2NqMTN4b3JzcWNRelU1bmllXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
+
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ2YjM1ZmNhYjVjNjc5YzMzYjE0M2ExZjViZDIwNGZfY2RTZUNsOHhCblhJa3IzVGNGMjN4ODJwdUVMV05BYlJfVG9rZW46UkxDSmI2amtlb0lpZ094SkFGRmMyTjU0bmNjXzE3NDg3NjI3MzE6MTc0ODc2NjMzMV9WNA)
 
 **ICR = 原文长度 / 规划长度**
 
@@ -249,7 +252,7 @@ LongEval为长文本生成评估带来了革命性突破：
 
 ### 模型能力大对比
 
-![实验结果总览](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MzA3YTBjYTJlN2Q5YTNjNjMyZDk3ODZkOTQ3OGE1OGZfSjh2WWpUNVdsZDQ4MjhleUtpWGprdGEzcUZhcjA0VDNfVG9rZW46VDR6QWJFU1FHb0pobnN4VGZTVGM0dzNQblRoXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MTUzZjQ0OGZmNjA2YWY2MmM2NWZlZGVkNWIxNGJmNTZfb3ZIZ3FodFllQ0MybmRRZzU3REZvZkcwb2R4dGJJQ0RfVG9rZW46VDR6QWJFU1FHb0pobnN4VGZTVGM0dzNQblRoXzE3NDg3NjI3OTY6MTc0ODc2NjM5Nl9WNA)
 
 #### 顶级选手的表现
 **Qwen2.5-72B-Instruct**：长文本生成的"全能冠军"
@@ -306,7 +309,7 @@ LongEval为长文本生成评估带来了革命性突破：
 
 ### 双范式对比：规划生成的压倒性优势
 
-![直接生成 vs 规划生成](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU0MzE5OGJhNWFlYTJlYzU0MzBjN2E1Yjk3NWFhNjBfR2hnN25UNFBRYzk1elpOR295QzBHNGJYa25PVzcyeHdfVG9rZW46Vmt6aWJhZE9Yb1RkMjR4d0Q0WmNCQkhRbmZlXzE3NDg3NTg3OTI6MTc0ODc2MjM5Ml9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGQ3OWY3ZGMyNThkM2UzYWRmYjVlYzU4OGFhOTViMTZfWGdOWmxMSWNWWUdTVkJjeVBxWTE2Yk0wbklKVFQ1dk9fVG9rZW46Vmt6aWJhZE9Yb1RkMjR4d0Q0WmNCQkhRbmZlXzE3NDg3NjI4MTU6MTc0ODc2NjQxNV9WNA)
 
 实验结果一边倒地支持规划生成：
 
@@ -354,7 +357,9 @@ LongEval为长文本生成评估带来了革命性突破：
 3. 看评估模型能否发现质量下降
 
 #### 测试结果
-![评估有效性验证](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YTFhYmVlZTZjNjJjZGIwMjE0ZjU1OGY5NmQyZmY0MWFfQmhMUVRUUFFaUnZOeGo4VEV3MzN2T2g2ZklOanU2RzNfVG9rZW46TmlEOGJubUo5b0FXQXd4Mmh2aGNPZlN0blJkXzE3NDg3NTg3OTI6MTc4NDc2MjM5Ml9WNA)
+
+
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YTMzNmU2MzgyMzhiOTliMThlNGNhYjc4OGQ4OWJlMDdfSFdnc3ZuTVhzN0hVTkQzcEhJdWN0YUplWXZwV3FRU05fVG9rZW46R1pkS2JPR28xb0ZqT1h4NnFUUGN2ZHpYbk1kXzE3NDg3NjI4Njg6MTc0ODc2NjQ2OF9WNA)
 
 **内容遵循度的敏锐表现**：
 - 随着替换比例增加，评分断崖式下跌
