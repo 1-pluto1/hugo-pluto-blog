@@ -22,8 +22,6 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
-
-
 单位： Stanford
 
 代码：https://github.com/simplescaling/s1
@@ -45,9 +43,9 @@ UseHugoToc: true
 - 在需要限制生成时，则可强行截断推理过程，从而实现对推理时长或计算预算的约束。
     
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NDU5OGJmMGMwNzUwMGRmZWRiOGViM2ExYmZkNGRmYzhfUVlHeWNqd2lJZ1V6bEoxNk1qaVk4TlpFMThjN2dlczZfVG9rZW46Q3B5RGI5V0N4b3FYZFl4TmJMMGNSenp1bnplXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MmIyMGRkOWZmMGVlODRiNTJhOWYwY2M0NWZjNzNmMTNfUFV0T0lwaGRTQVFVbU05S0ltRDVPazJFbWZnM1NrVXhfVG9rZW46Q3B5RGI5V0N4b3FYZFl4TmJMMGNSenp1bnplXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MjQ0NGU3ODczNWMyYWM1YjJhODFiMGI1ZTZlZGUzMDZfbk9oakYweXlPZmdLbW1tVWhzNUtmRFZKdzhCSFBrYUlfVG9rZW46SHBJa2JpZ0NLbzVXODl4ZEU2NWN0UGllbk5kXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MWM1MDY2YmJiM2I5OWU0MmRmN2JkN2E0ZDZmN2UyNzBfaE1qR3plV0FwUkxOd254cFlMaDdXZ25Od2o0dTlldDlfVG9rZW46SHBJa2JpZ0NLbzVXODl4ZEU2NWN0UGllbk5kXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
 **显著提升了模型在数学竞赛题目上的表现** 利用上述数据集和“预算强制”方法，对大模型（Qwen2.5 32B-Instruct）进行了监督微调并命名为 s1-32B。在数学竞赛数据集（MATH 和 AIME24）上，s1-32B 相比 OpenAI 提供的 o1-preview 模型在准确率上最高提升可达 27%。同时，通过在推理过程中灵活地应用“预算强制”，可以让模型取得比常规推理更高的准确率（从 50% 提升到 57%）。
 
@@ -131,7 +129,7 @@ UseHugoToc: true
 
 如以下例子：
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=N2I2YTM0OGQzZGY5NjkzYjcwMzIxMDg2YzY5ODU1M2ZfUW5KYkF5S0dyZlJWT1h3OHJuNW92aXpGUUJoN3A1VHVfVG9rZW46VDdvMWJEQk50b3NYZm94VUE5WWNQejRYbnRkXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTZhN2JmNjNiN2U0ODU1MmRlOTNmMTJkY2I3NDM2MGZfNUJkQlNZWG5IQWx2c2RadllVbDdqRGlvRFY1U05SUGZfVG9rZW46VDdvMWJEQk50b3NYZm94VUE5WWNQejRYbnRkXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
 ##### **Baselines**
 
@@ -157,7 +155,7 @@ UseHugoToc: true
 1. **可控性（Control）**
     
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MjFmMTExN2U3OWMxNmQxNzA1NTNkYmNhZDRlMzE1N2NfODRPM2J4SWJkaHZESWpzOGZtMHlyNTdQVEdPcU1XbzNfVG9rZW46TlJjNGJsbW9Sb29SVmp4MU1KQWM1dnVjbnViXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFhZTcwNDNjNDE1ZjAwZWJiODY0OTZmNDkzOTlhMGZfNnJxOW9DQkRQQ3o5RTUxcHc5R2J3bllKQmZXZmdYYkZfVG9rZW46TlJjNGJsbW9Sb29SVmp4MU1KQWM1dnVjbnViXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
 2. 其中，$$\alpha_{\min}$$ 与 $$\alpha_{\max}$$分别代表预先设定的最小和最大思考 token（即推理计算预算），$$\mathcal{A$$ 为不同预算取值的集合。指标值以百分比形式呈现，若该方法在整个预算范围内都能稳定地生成对应长度的思考内容，则可控性可达 100%。这一指标衡量了方法能否在测试阶段有效地按照预期的“预算”来控制推理过程长度。
     
@@ -167,14 +165,14 @@ UseHugoToc: true
 3. **扩展性（Scaling）**
     
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=YWFjZjE5NjM5MzQ2MTk1NTg5Nzk1ODQ2ZDAwMjQwOTZfSUNudG4yTFU0UjZHYThsWmttbFptRUFxc3NpcU5oY21fVG9rZW46UlhEamJ6enAwb1VzeUl4cmJOZGNGZ3BybjZmXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTM1YzlkYTE0NDhiMjFhNTRjYWVhMmFlZGI2ODhjMWFfR2ZnSGNuU0dUdGZSbUpyRmdiNnFhZDU5MjZFM0ZMeTVfVG9rZW46UlhEamJ6enAwb1VzeUl4cmJOZGNGZ3BybjZmXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
 4. 该指标取决于随着思考 token 的增加，模型在准确率$$f(\cdot$$上能否取得更高的提升，并且提升速度（斜率）有多大。它用 piece-wise linear 函数的平均斜率来衡量方法的整体扩展能力。若指标为正且数值越大，说明增加推理预算能更有效地提升模型表现。
     
 5. **性能上限（Performance）**
     
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NDIzMmI4ODlmNzk1NzczYzRjOWU2YjAwNzJiMzZkNmNfV3JhajZRc0w5a0JyTXdySlhMTDlESUh3QkZlNWRZdmVfVG9rZW46UmxZeGJkdWtrbzZiVFp4NHMwN2M4U0JXbnlmXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NGFiNTY2MTk4NzRjZjY3Mzg0MGQ3YWUwZWQ0NzhiNTRfUHhhQ08yd0lDZXRtWTlxS2hLU08yWWlvaWpqdE9NQnRfVG9rZW46UmxZeGJkdWtrbzZiVFp4NHMwN2M4U0JXbnlmXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
 
 6. 即在给定的测试预算范围内，该方法所能达到的最高准确率。尽管理想情况下，如果模型在预算增加时准确率能持续上升，理论上可达到“100%”或者无限逼近最高值，但现实中还受可控性、上下文窗口大小等因素的限制，最终会出现增长趋缓或被迫停止的情况。
     
@@ -209,7 +207,4 @@ UseHugoToc: true
 
 生成思维链的从Gemini换到了DeepSeek R1
 
-![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=OGM4OTMwMzUxZjhlZjg5NTBiZTJlMTAzYjg3OGI1YTBfMDN4QkhUZWNWVlk4azRCb2Y5ajM2blBvVlludmhWMTZfVG9rZW46Q2g3bWI0Zjl4b2JnZzh4enVtbmNiaU1CblhlXzE3NDg3NTg4Njk6MTc0ODc2MjQ2OV9WNA)
-
-
-论文翻译：https://dppemvhuzp.feishu.cn/docx/PUIYdB8AioEiAWxmbqXcJMCnnOS?from=from_copylink
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MGFlOTc4YzNhNmU4NmQ3Yjc2ZDAxYzZkODEzZWFhMDVfM1ljMXhwN0RrTmRxSUo5eERJcU5YY3AzTldsZU9OQ0ZfVG9rZW46Q2g3bWI0Zjl4b2JnZzh4enVtbmNiaU1CblhlXzE3NDg3NjM3Mjk6MTc0ODc2NzMyOV9WNA)
