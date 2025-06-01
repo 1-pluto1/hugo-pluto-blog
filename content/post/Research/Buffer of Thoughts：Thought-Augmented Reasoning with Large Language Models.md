@@ -1,12 +1,17 @@
 ---
-title: 
-date: 2022-09-15T11:30:03+00:00
-tags: 
-categories: 
+title: Buffer of Thoughts：Thought-Augmented Reasoning with Large Language Models
+date: 2025-03-01T11:30:03+00:00
+tags:
+  - LLM
+  - NLP
+  - ReasoningModel
+categories:
+  - AI
+  - Research
 author: ZhaoYang
 showToc: true
 TocOpen: true
-draft: true
+draft: false
 disableShare: false
 hideSummary: false
 searchHidden: false
@@ -18,4 +23,5 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 ---
 
+施工中
 
