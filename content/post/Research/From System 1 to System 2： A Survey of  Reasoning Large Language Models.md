@@ -38,8 +38,8 @@ UseHugoToc: true
 
 **重要发现**：慢思考模型在复杂推理任务中展现出类人认知能力
 
-![推理LLM发展时间线](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=MzRiYTlhZDk1YmQ2MGI5ODZmODdmOTJkYTVjOTkzMDlfZlh4VmNUT3o3YnExVEZHT3kyd1dPOXB5SnZYUFdlWEhfVG9rZW46VVJ0bmJHTVJUb0o2b0Z4cU5KSWNsb1NDblhiXzE3NDg3NTgzNTY6MTc0ODc2MTk1Nl9WNA)
-
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NTEyMTUxNWQ0ZmQ3MWQyOGI3OWU5MGIzMzhiY2M0M2JfMmI5dXBJZjhxZk84SzlmYkJacmFZN1ZyUmExZ0lEVUpfVG9rZW46VVJ0bmJHTVJUb0o2b0Z4cU5KSWNsb1NDblhiXzE3NDg3NjMwNjc6MTc0ODc2NjY2N19WNA)
+   
 ## 核心贡献
 
 这篇综述为理解推理型LLM的发展提供了全新视角：
@@ -168,8 +168,7 @@ MCTS为推理型LLM带来了**结构化搜索**能力：
 
 ## 推理型LLM的五大核心方法
 
-![推理型LLM核心方法](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDQxODlmODdmODAzMWM5ZmZmMjBjZjY5Y2MxNGMxNmRfcFZZOXgxNUxRd2NYY0Z2NmlqY09CUlZCYmk2Q1pXRDJfVG9rZW46VGY1Y2I4RGZhbzhURXB4U0k0bWNoRHZWblJkXzE3NDg3NTgzNTY6MTc0ODc2MTk1Nl9WNA)
-
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=NjAyNGVjYWM1ZThkMmY4MzFlZTRmYWRiOWFjZjIyOWFfSzZLcm5Ja0dWMkNtUHJBNFRrVkZ0Tnp0SWp0VVphTENfVG9rZW46VGY1Y2I4RGZhbzhURXB4U0k0bWNoRHZWblJkXzE3NDg3NjMxMTU6MTc0ODc2NjcxNV9WNA)
 ### 1. 结构化搜索：系统性探索问题空间
 
 **核心思想**：不是盲目地生成答案，而是系统性地探索所有可能的解决路径。
@@ -294,7 +293,7 @@ MCTS为推理型LLM带来了**结构化搜索**能力：
 
 ## 技术对比：传统vs推理型LLM
 
-![传统推理模型与推理LLM对比](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=OWY5Y2E0MTUxODcyZTNmNzNkYTVkZTFmMmEzM2JjMzVfWmVVNmxER3dJN00xbktZYlBPUXRvT0RmSldTeGJQWWlfVG9rZW46TUZ1eGJzdVRIb2t2aHJ4NlFFTGNRVUhWbkxMXzE3NDg3NTgzNTY6MTc0ODc2MTk1Nl9WNA)
+![](https://dppemvhuzp.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ZhOTFmMDJmMjkyNjc5ZjliODFjNGYxMTViYjM1ZDdfR0Y5cnhpZmFZSEtZNTREaEhXWVI0clV2UVJjcFJKTm5fVG9rZW46TUZ1eGJzdVRIb2t2aHJ4NlFFTGNRVUhWbkxMXzE3NDg3NjMxMzA6MTc0ODc2NjczMF9WNA)
 
 | 维度 | 传统LLM | 推理型LLM |
 |------|---------|-----------|
