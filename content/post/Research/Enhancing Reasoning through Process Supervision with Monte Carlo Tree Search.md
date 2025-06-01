@@ -1,5 +1,5 @@
 ---
-title: "Enhancing Reasoning through Process Supervision with Monte Carlo Tree Search"
+title: Enhancing Reasoning through Process Supervision with Monte Carlo Tree Search
 date: 2025-02-20T11:30:03+00:00
 tags:
   - LLM
@@ -7,7 +7,6 @@ tags:
   - ReasoningModel
   - MCTS
   - Process-Supervision
-  - Self-Training
 categories:
   - AI
   - Research

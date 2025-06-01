@@ -6,7 +6,6 @@ tags:
   - NLP
   - Benchmark
   - Long-Context
-  - Reasoning
 categories:
   - AI
   - Research

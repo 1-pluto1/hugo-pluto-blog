@@ -7,7 +7,6 @@ tags:
   - ReasoningModel
   - MATH
   - DPO
-  - ReasonFlux
 categories:
   - AI
   - Research
