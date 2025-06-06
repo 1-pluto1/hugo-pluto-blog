@@ -193,3 +193,54 @@ return 0;
 }
 
 ```
+
+
+### 洛谷-P1616
+
+```c++
+//完全背包问题
+
+#include<iostream>
+
+#include<algorithm>
+
+using namespace std;
+
+int t, m;
+
+const int M = 1e4 + 10, T = 1e7 + 10;
+
+long long dp[T], values[M], times[M];
+
+  
+
+int main(){
+
+cin >> t >> m;
+
+for (int i = 1; i < m + 1; i++) {
+
+cin >> times[i] >> values[i];
+
+}
+
+  
+
+for (int i = 1; i < m + 1; i ++){
+
+for (int j = times[i]; j < t + 1; j++){
+
+dp[j] = max(dp[j], dp[j - times[i]] + values[i]);
+
+}
+
+}
+
+  
+
+cout << dp[t];
+
+return 0;
+
+}
+```
