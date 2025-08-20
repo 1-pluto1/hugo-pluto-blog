@@ -51,3 +51,21 @@ UseHugoToc: true
 本文的其余部分组织如下：第2节介绍本文的背景和相关工作。第3节描述我们的技术细节。第4节介绍实验设置。第5节报告并分析实验结果。第6节总结本文。
 
 ### Background and Related Work
+
+##### 事实性幻觉的检测 (Detection of Factuality Hallucinations)
+
+尽管深度学习模型表现出色，但众所周知它们存在可靠性 [Deng et al. 2023; Wu et al. 2024] 和隐私问题 [Huang et al. 2024; Wu et al. 2023]。LLM一个独特的可靠性问题是它们有时会产生幻觉。因此，检测LLM的幻觉对于确保生成内容的可靠性和可信度至关重要。
+
+为了有效检测LLM的**事实性幻觉**，一个直观的策略是将模型生成的内容与可靠的知识源进行比较 [Chen et al. 2024; Chern et al. 2023; Guo et al. 2022; Min et al. 2023]。例如，Chern等人 [Chern et al. 2023] 提出了一个统一的框架，该框架允许LLM通过使用一系列外部工具收集证据来检测事实错误。然而，这种方法需要访问外部数据库，并可能产生高昂的推理成本。
+
+当前一种常见的方法是**不确定性估计（uncertainty estimation）**，该方法认为LLM的幻觉源于模型的不确定性 [Luo et al. 2023; Varshney et al. 2023]。Varshney等人 [Varshney et al. 2023] 通过考虑关键概念中的最小词元（token）概率来确定模型对这些概念的不确定性。然而，当只能通过API调用访问LLM时，输出的词元级概率分布通常是不可用的。由于这一限制，一些研究人员提出从模型的可观察行为中推断其**置信度分数** [Kadavath et al. 2022; Manakul et al. 2023; Xiong et al. 2024]。例如，Manakul等人 [Manakul et al. 2023] 通过对同一提示词进行多次采样以获得LLM的多个回答，并评估这些事实性陈述之间的一致性来检测幻觉。
+
+##### 蜕变测试 (Metamorphic Testing)
+
+**蜕变测试（Metamorphic Testing, MT）是一种黑盒测试方法。它首先基于待测软件的领域知识建立蜕变关系（Metamorphic Relations, MRs）**。然后，它利用蜕变关系生成新的测试用例，并通过验证蜕变关系是否得以维持来判断测试是否通过。蜕变测试因其能够缓解软件测试过程中的**“测试预言机”（test oracle）问题**，而被广泛用于测试不同任务的深度学习（DL）模型 [Liu et al. 2014]。自动驾驶和神经机器翻译模型是吸引了许多基于MT的测试方法的两种典型深度学习模型 [Luu et al. 2022; Raunak et al. 2022; Wang and Su 2020]。MT也被应用于问答模型。然而，现有方法要么测试准确性不足，要么侧重于验证问答模型的**忠实性（faithfulness）** [Chen et al. 2021; Shen et al. 2022]。
+
+##### 思维链与自洽性 (Chain of Thought and Self-Consistency)
+
+**思维链（Chain of Thought, CoT）**是一种通过引入中间推理步骤来实现复杂推理能力的技术 [Wei et al. 2022]。研究表明，该技术可以显著提升模型在数学、常识和推理任务上的性能。原因是CoT能让模型将问题分解为更易于处理的子问题，从而提高其理解和解决问题的能力。大量研究致力于使用CoT的概念来增强LLM的性能 [Kojima et al. 2022; Liu et al. 2022; Wang et al. 2022]。其中最先进的方法之一是自洽性（Self-Consistency） [Wang et al. 2022]，它要求模型采用不同的推理路径，然后选择最一致的答案。
+
+### Approach
