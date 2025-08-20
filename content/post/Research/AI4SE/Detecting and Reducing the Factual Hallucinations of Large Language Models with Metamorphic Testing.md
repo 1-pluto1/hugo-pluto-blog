@@ -69,3 +69,6 @@ UseHugoToc: true
 **思维链（Chain of Thought, CoT）**是一种通过引入中间推理步骤来实现复杂推理能力的技术 [Wei et al. 2022]。研究表明，该技术可以显著提升模型在数学、常识和推理任务上的性能。原因是CoT能让模型将问题分解为更易于处理的子问题，从而提高其理解和解决问题的能力。大量研究致力于使用CoT的概念来增强LLM的性能 [Kojima et al. 2022; Liu et al. 2022; Wang et al. 2022]。其中最先进的方法之一是自洽性（Self-Consistency） [Wang et al. 2022]，它要求模型采用不同的推理路径，然后选择最一致的答案。
 
 ### Approach
+
+
+
