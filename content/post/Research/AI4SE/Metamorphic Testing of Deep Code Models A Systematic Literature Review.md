@@ -153,3 +153,167 @@ UseHugoToc: true
 
 
 ### RESULTS
+
+
+本小节总结我们在蜕变转换类型、应用技术、目标模型及下游任务等方面的研究发现。
+
+#### 4.1 RQ1: Types of Metamorphic Transformations
+
+本节基于前述方法论所确定的各项核心研究，针对RQ1系统梳理了使用的蜕变转换技术。我们共从核心文献中识别出121种转换类型（完整清单详见补充材料），并参照Liu等[56]和Quiring等[57]的分类体系进行归类，同时为未能纳入现有分类的转换新增了类别。表5展示了各类别的转换类型数量，具体分类如下：
+
+##### 4.1.1 简单转换(Trivial Transformations)
+
+简单代码转换是通过修改程序底层特征而不影响基本功能的轻量级操作，出现于36%的文献中。典型转换包括：
+
+- 语句调换(Permute Statement)：重排语句顺序保持语义不变（Springer等[58]展示语句重组如何维持程序语义；Rabin等[59,60]通过语法置换和独立语句交换评估模型鲁棒性）
+- 展开简写表达式(Unfold Shorthand Expressions)：将紧缩表达式（如a += b）展开为完整形式（a = a + b），研究参见[61-64]
+- 操作数交换(Swap Operands)：包括非对称交换（比较运算符操作数调换，如a > b → b < a，见[56,65,64]）和对称交换（交换交换律运算符操作数，如a + b → b + a，见[61,66]）
+- 移除未使用代码(Remove Unused Code)：删除未使用的变量/函数/库（[56,57,67]）
+- 声明拆分/聚合(Split/Aggregate Declarations)：调整变量声明方式（如int a, b → int a; int b，见[56,62]）
+- 声明与初始化分离(Split/Aggregate Declaration and Initialization)：修改初始化模式（如int a = 1 → int a; a = 1，见[62,64]）
+- 前后缀交换(Exchange Suffix/Prefix)：替换自增/自减运算符（如i++ → ++i，见[65,62]）
+- 添加中性元(Add Neutral Element)：在逻辑表达式中添加中性元素（如true → 0^1 == 1，见[8,9]）
+
+##### 4.1.2 标识符重命名(Identifier Renaming)
+
+该类别转换覆盖86.5%的研究文献。我们突破既往研究[51]的单一分类模式，依据重命名策略对模型行为的显著影响进行细分：
+
+- 基于策略的重命名：采用特殊技术替换标识符[65,77-85]
+- 近义词替换：改用语义相近词汇[77,86,87]
+- 模板值替换：如int a → int var1[88,57,89]
+- 随机标识符替换：从数据集中随机选择新标识符[90,91,57]
+- 混淆处理：用随机字符序列替换（如int test_counter; → int Bq41wD7l;[56,69]）
+- 变量重命名：直接更改变量名[76,58,75,74]
+- 局部变量/参数/字段重命名[73]
+- 语义保持标识符重命名：在嵌入空间施加对抗扰动[71]
+- API/参数/方法名重命名：分析模型对语义迁移的处理能力[72]
+- 系统化/任意重命名：测试语义等价性[59,60,70]
+- 词汇表重命名：使用预定义词汇替换[92,8,9]
+- 上下文命名：如int count → int count_var_1[88]
+
+##### 4.1.3 注释转换(Comment Transformations)
+
+约9%的研究涉及注释转换，包括内容/位置/结构修改：
+
+- 删除注释(delete comment)：完全移除注释[8,64]
+- 添加注释(add comment)：增加新注释测试模型注解处理能力[8]
+- 移动注释(move comment)：改变注释位置以调整上下文关联[8]
+- 注释内词序调整(move word in comment)[91]
+- 注释内词汇删除(delete word in comment)[91]
+- 注释内词汇复制(copy word in comment)：制造冗余测试模型反应[91]
+- 注释插入/删除/置换组合操作[93]
+
+##### 4.1.4 数据转换(Data Transformations)
+
+45.5%的研究采用此类转换，通过改变数据表示方式测试模型适应性：
+
+- 显式类型转换(use cast expressions)：如b = (int) a[56,68]
+- 字符串转字符数组(Convert string literals to char arrays)[56,57]
+- 字符转ASCII值(convert char literals into ASCII values)：如char c='A' → char c=65
+- 整数字面量转表达式(convert int literals into expressions)：如int b = 8 → int b = 2 * 4
+- 整数转十六进制(convert integers to hexadecimal numbers)：如int b = 48 → int b = 0x30
+- 动态类型表达式(use typed expression)：如typeid(a) b = 0[56]
+- Def-Use链断裂(Def-Use Break)：测试变量关系变更的恢复能力[70]
+- 布尔值交换(boolean Exchange)：如true ↔ false[60,59,58,76]
+- 类型转换(type conversions)：如bool转int[93]
+- 字符串编码(EncodeStrings)：用函数调用替换字面字符串[94]
+- 冗余表达式(plus zero/return optimal adding)：如a = a + 0[72]
+- 数据流操作(data flow operations)：应用于代码归属分析、克隆检测等任务[74]
+- 关系运算符切换(relational operator switching)：如a < b → b > a[75]
+- 等值赋值插入(inserting equal assignments)：如b = -10; → b = b - 10[75]
+
+##### 4.1.5 控制流转换(Control Flow Transformations)
+
+58%的研究使用此类转换，通过改变执行流程测试程序逻辑处理能力：
+
+- for/while循环互转(convert for-statement to while-statement)[56,65,61,66,57,89,62-64]
+- if-else/switch-case互转(convert if-else to switch-case)[56,61,89,62,64]
+- 循环类型替换(loop exchange)[76,58,75,59]
+- 独立语句调换(swap independent statements)[61,91,89,64]
+- if条件拆分(split conditions of if-statements)：如if(a && b) → if(a) if(b)[56,57,62]
+- if-else转三元表达式(convert if-else to conditional expression)：如condition ? a : b[56,62]
+- 条件包装(wrap expression in if statement)：如if(true)包裹代码[8,9]
+- lambda包装(wrap expression in lambda)[8,9]
+- if-else体交换(swap if-else bodies)：同时取反条件[56]
+- 结构重组(flatten/MergeSimple)：重组语句与函数[94]
+- 分支结构修改(If-Else Flip)[70]
+- 混淆条件(obfuscated conditions)：改变程序逻辑但不影响静态分析复杂度[95]
+
+##### 4.1.6 函数转换(Function Transformations)
+
+24.5%的研究涉及函数级转换，测试模型对函数结构/语义变化的适应性：
+
+- 增加函数参数(Add Function Arguments)：从词典或程序推断添加参数[8,9]
+- 代码块委托(Delegate to Function)：将代码块提取为独立函数[8,9]
+- 参数合并(Merge Function Arguments)：合并参数为结构体[56]
+- 参数重排序(Reorder Function Arguments)[56]
+- 二元表达式转函数(Convert Binary Expressions into Functions)：如c = add(a, b)[56]
+- 函数调用图修改(modify Function Call Graph)：添加预设函数[95]
+- 参数操作(RndArgs/MergeSimple等)：操纵函数参数与结构[94]
+- 代码片段提取(extract snippets into new functions)[93]
+- 独立语句块交换(Independent Swap)[70]
+
+##### 4.1.7 API转换(API Transformations)
+
+仅6%研究使用，是最罕见的转换类型，主要针对C/C++接口等效替换：
+
+- C/C++库函数交换(Swap C/C++ Libraries for Reading and Writing)：如printf ↔ cin/cout[57,62]
+- 控制台I/O替换文件I/O(Use stdin/stdout Instead of Files)[57]
+- 流同步启用/禁用(Enable/Disable Sync Between C/C++ Streams)[57]
+
+##### 4.1.8 死代码插入转换(Dead Code Insertion Transformations)
+
+64.5%研究使用的重要类别，通过插入永不执行的代码测试冗余处理能力：
+
+- try-catch陷阱("try-catch trap")：插入未执行函数调用[95]
+- 未使用语句(Unused Statement)：添加不可达块[76]
+- 假条件块(if (false) blocks)[75]
+- 冗余模式构建(redundant constructs)：如if(false){...}[74]
+- 垃圾代码(junk code)：包括无用变量或打印语句[73]
+- 不可达代码(unreachable code)：如if (1==0): print(0)[72]
+- try-catch块插入[60]
+- 添加死代码块(Add Dead Code)：如if(false){...}[78,66,79-81]
+- 添加打印语句(Add Print Statement)[78,88,79-81]
+- 添加未使用变量(Add Unused Variable)：按策略[66,81,82]、词典[8,9]或程序上下文命名[8,9]
+- 冗余库导入(Add Libraries)[56,57]
+- 外部代码移植(Transfer Code)：将无关代码插入不可达区域[96,61]
+- 不可达循环/分支插入(Insert Unreachable Loop or Branch)[97,81]
+- 空语句/分支/循环操作(Insert or Delete Empty Statement/Branch/Loop)[97,92]
+
+##### 4.1.9 杂项转换(Miscellaneous Transformations)
+
+20%研究包含的非常规转换，虽简单但影响模型性能：
+
+- 空白符增删(Add or Remove Whitespace)[8]
+- 复合语句增删(Add or Delete Compound Statement)：调整大括号范围[57]
+- 格式修改(altering formatting)[93]
+- 主函数显式返回(Add Explicit Return to Main Method)[57]
+- 返回字面量转变量(Replace Literal Return with Variable)[57]
+- 语句重排(Statement Permute)[76,75]
+- 嵌入空间梯度扰动(gradient-based virtual perturbations)[71]
+- 表达式分割/声明合并(dividing expressions/merging variable declarations)[75]
+- 自动格式化(Auto-Format Code)[67]
+- 删除打印语句(Delete Print Statement)[64]
+
+研究发现标识符重命名和死代码插入是最常用转换类型，因其能最大程度欺骗模型且支持跨标签代码特征迁移。
+
+
+
+RQ1结论：蜕变转换类型呈现高度多样性。死代码插入(64.5%)、标识符重命名(86.5%)和控制流转换(58%)应用频率最高；简单转换(36%)、数据转换(50%)和函数转换(24.5%)广泛用于基线与语义测试；API与注释转换(各6%)发展最不充分；杂项转换(20%)涵盖异质化研究特定操作。
+
+
+
+研究建议：未来工作应重点发展API转换、注释转换等薄弱类别，超越常用技术构建更全面的鲁棒性评估框架。具体方向包括：
+• 拓展转换谱系：开发API重写、注释/空白编辑、整体函数重构等模仿现实重构的操作
+• 深化语义测试：突破表层修改，关注数据流、控制流和资源相关的行为保持转换（如循环展开、记忆化）
+• 量化转换质量：结合自然度、编译率、可读性指标补充成功率评估
+• 跨语言工具开发：突破当前Java/Python中心格局，支持JavaScript/C#/Go等语言的AST级转换
+• 组合转换研究：探索多转换叠加的协同效应，自适应调度算法可能揭示单步测试未发现的复合漏洞
+• 共享实验构件：公开转换语料库、参考实现和有效性检查工具，促进对比研究与累积进展
+
+
+
+#### 4.2 RQ2: Application Techniques for Metamorphic Transformations
+
+
+
