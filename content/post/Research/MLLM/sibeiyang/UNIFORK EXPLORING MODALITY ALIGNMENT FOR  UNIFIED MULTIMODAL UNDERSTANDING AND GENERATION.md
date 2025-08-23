@@ -85,7 +85,7 @@ $$A_{\text{und}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n
 
 UniFork 的整体架构如图 3 所示，它能够在统一的框架内同时实现跨任务学习和任务专属的特化。
 
-
+<img src="/Users/yangchao/Pictures/UniFork Method.png" alt="0." style="zoom:22%;" />
 
 ##### **视觉分词器 (Visual Tokenizer)**
 
@@ -98,3 +98,29 @@ UniFork 的整体架构如图 3 所示，它能够在统一的框架内同时实
 ##### **生成视觉头 (Generation Vision Head)**
 
 由于该图像分词器（Wu et al., 2024b）使用了残差矢量量化（residual vector quantization）方法（Lee et al., 2022）将每个词元映射为多个离散编码，我们引入了一个图像头（image head）来预测这些编码。这个头接收来自 LLM 最后一层的输出特征，并以自回归（autoregressively）的方式为每个词元生成编码。
+
+#### TRAINING PIPELINE
+
+如图 4 所示，整体的训练过程可分为三个阶段：
+
+##### **第一阶段：视觉对齐预训练 (Visual Alignment Pretraining)**
+
+此阶段的目标是将视觉表示与预训练的 LLM 对齐。遵循先前的工作（Xie et al., 2024; Chen et al., 2025b），我们首先在 ImageNet-1K (Deng et al., 2009) 数据集上训练模型，以高效地捕捉像素级别的依赖关系。我们使用成对的图像和文本描述来构建学习任务，其中类别名称通过使用 OpenAI ImageNet 模板 (Radford et al., 2021) 被转换为自然语言提示。该数据被用于训练**图像字幕生成 (image captioning)** 和**文本到图像生成 (text-to-image generation)** 两个任务。随后，我们使用来自 Laion-En (Schuhmann et al., 2022) 的 3000 万样本和来自 COYO (Byeon et al., 2022) 的 1000 万样本的混合数据，对这两个任务进行训练。在此阶段，LLM 的权重被**冻结**，我们只训练随机初始化的视觉连接器 (visual connector) 和图像头 (image head)。生成任务遵循 `“<caption><image>”` 的格式，而字幕生成任务则使用 `“<image><caption>”` 的格式。
+
+##### **第二阶段：联合优化 (Joint Optimization)**
+
+此阶段旨在增强模型在图像理解和生成两方面的综合能力。我们**解冻** LLM，并联合优化主干网络、视觉连接器和图像头。对于多任务预训练，我们使用了来自 JourneyDB (Sun et al., 2023a)、SAM (Kirillov et al., 2023)、Unsplash (Unsplash, 2020) 以及一个内部数据集的 3250 万个图文对用于生成任务，并使用了 InternVL-1.5 (Chen et al., 2024b) 预训练数据的一个 1650 万的子集用于理解任务。
+
+接着，我们进行**指令微调 (instruction tuning)**。在生成任务上，我们从 3250 万的数据集中采样一个子集，并与 BLIP3o-60k (Chen et al., 2025a) 数据集结合，总计 500 万样本。在理解任务上，我们使用 InternVL-1.5 SFT 数据集的一个 380 万的子集。生成任务的格式为：`“USER: <Input Message> ASSISTANT: <Response>”`。对于理解任务，我们采用基线 SFT 的对话格式 (Yang et al., 2025)。
+
+##### **第三阶段：任务专属微调 (Task-Specific Fine-Tuning)**
+
+UniFork 架构的一个重要优势是其优化的灵活性。在联合训练之后，我们通过**独立的微调**进一步提升特定任务的性能。在此阶段，只有任务专属的层会被更新，而所有共享组件保持冻结。我们复用第二阶段的指令微调数据集，并独立地对理解和生成分支进行微调。这最后一个阶段使得模型能够在不引入干扰的情况下专精于各项任务，从而有效地平衡了共享语义表示和任务专属优化。
+
+#### TRAINING OBJECTIVE
+
+
+
+
+
+### EXPERIMENTS
