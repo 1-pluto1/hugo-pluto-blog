@@ -82,3 +82,19 @@ $$A_{\text{und}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n
 
 
 #### ARCHITECTURE
+
+UniFork 的整体架构如图 3 所示，它能够在统一的框架内同时实现跨任务学习和任务专属的特化。
+
+
+
+##### **视觉分词器 (Visual Tokenizer)**
+
+为了保持架构的简洁性，我们对理解和生成任务采用了同一个图像分词器（tokenizer）。我们早期的探索性实验表明，基于 VAE 的分词器在有限规模的训练下表现不佳，这与先前工作（Xie et al., 2024）的观察结果一致。因此，我们利用了 VILA-U（Wu et al., 2024b）中提出的分词器，该分词器在保持图像重建质量的同时，增强了文本与图像的对齐。给定一张输入图像，该分词器会将其以 16×16 的系数进行压缩，将得到的二维特征展平为一维的词元（token）序列，并在将这些词元送入语言模型之前，先通过一个轻量级的 MLP（多层感知机）。
+
+##### **Transformer 主干网络 (Transformer Backbone)**
+
+受我们对齐分析的启发，UniFork 采用了一种 **Y 形的 Transformer 架构**。给定一个总共有 (M + N) 层的 Transformer，前 M 层在两个任务间共享，以支持联合的语义表示学习。剩下的 N 层包含两个任务专属的分支：一个专用于图像理解的语义强化，另一个则专注于图像生成的空间细节重建。我们使用 Qwen2.5-0.5B LLM（Yang et al., 2025）的权重来初始化整个主干网络。值得注意的是，当 N = 0 时，UniFork 退化为具有完全参数共享的 Emu3（Wang et al., 2024）架构；当 M = 0 时，其结构变得与最近在 BAGEL（Deng et al., 2025）中提出的“混合 Transformer”（Mixture-of-Transformers）设计相似。
+
+##### **生成视觉头 (Generation Vision Head)**
+
+由于该图像分词器（Wu et al., 2024b）使用了残差矢量量化（residual vector quantization）方法（Lee et al., 2022）将每个词元映射为多个离散编码，我们引入了一个图像头（image head）来预测这些编码。这个头接收来自 LLM 最后一层的输出特征，并以自回归（autoregressively）的方式为每个词元生成编码。
