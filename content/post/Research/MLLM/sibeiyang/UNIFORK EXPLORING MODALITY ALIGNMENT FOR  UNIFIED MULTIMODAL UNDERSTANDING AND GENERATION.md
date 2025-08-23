@@ -66,13 +66,14 @@ UseHugoToc: true
 
 近期的工作致力于在单一框架内统一图像理解与生成，并提出了多种架构。然而，很少有工作研究这两项任务之间的内在关系。在本研究中，我们从**模态对齐**的视角来探究它们的差异。
 
-给定一张图像 $X$ 及其对应的文本提示 $T$，我们将第 $l$ 个 Transformer 层提取的视觉特征表示为 $V_{\text{gen}}^l \in \mathbb{R}^{n_v \times c}$，并将最后一个 Transformer 层的文本提示特征表示为 $T \in \mathbb{R}^{n_t \times c}$。其中，$n_v$ 和 $n_t$ 分别代表视觉和文本词元（token）的数量，$c$ 是特征的通道大小。对于**生成任务**，我们从 Geneval (Ghosh et al., 2023) 数据集中采样了 500 个提示。在每一层 $l$，我们使用 mutual k-nearest neighbors (mutual-kNN) 计算模态对齐分数 $A_{\text{gen}}^l$，这是一种常用于评估表示对齐的指标 (Huh et al., 2024)：
+给定一张图像 $ \latex $ 及其对应的文本提示 $T$，我们将第 $ l $ 个 Transformer 层提取的视觉特征表示为 $V_{\text{gen}}^l \in \mathbb{R}^{n_v \times c}$，并将最后一个 Transformer 层的文本提示特征表示为 $T \in \mathbb{R}^{n_t \times c}$。其中，$n_v$ 和 $n_t$ 分别代表视觉和文本词元（token）的数量，$c$ 是特征的通道大小。对于**生成任务**，我们从 Geneval (Ghosh et al., 2023) 数据集中采样了 500 个提示。在每一层 $l$，我们使用 mutual k-nearest neighbors (mutual-kNN) 计算模态对齐分数 $A_{\text{gen}}^l$，这是一种常用于评估表示对齐的指标 (Huh et al., 2024)：
 $$A_{\text{gen}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n_v} V_{\text{gen}}^{l,i}[b] \right)_{b=1}^{500}, \left\{ \frac{1}{n_t} \sum_{j=1}^{n_t} T_j[b] \right\}_{b=1}^{500} \right).$$
 对于**理解任务**，我们将生成的图像连同查询“为这张图片提供一句单句描述：（Provide a one-sentence caption for the image:）”一起输入模型。我们从每一层提取视觉特征 $V_{\text{und}}^l$，并计算 $V_{\text{und}}^l$ 与其对应提示特征之间的对齐分数：
-$$A_{\text{und}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n_v} V_{\text{und}}^{l,i}[b] \right)_{b=1}^{500}, \left\{ \frac{1}{n_t} \sum_{j=1}^{n_t} T_j[b] \right\}_{b=1}^{500} \right).$$
 
 
-
+$$
+A_{\text{und}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n_v} V_{\text{und}}^{l,i}[b] \right)_{b=1}^{500}, \left\{ \frac{1}{n_t} \sum_{j=1}^{n_t} T_j[b] \right\}_{b=1}^{500} \right)
+$$
 
 
 ### 生成与理解中存在差异的对齐模式
@@ -86,6 +87,8 @@ $$A_{\text{und}}^l = \text{mutual-kNN} \left( \left( \frac{1}{n_v} \sum_{i=1}^{n
 受这些观察的启发，我们提出了一种 **Y 形架构**，该架构共享浅层网络以进行联合语义学习，并解耦深层网络以适应特定任务的对齐需求。
 
 
-$$
 
-$$
+
+
+
+
