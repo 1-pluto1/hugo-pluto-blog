@@ -103,7 +103,7 @@ UniFork 的整体架构如图 3 所示，它能够在统一的框架内同时实
 
 如图 4 所示，整体的训练过程可分为三个阶段：
 
-![fig4](/Users/yangchao/Pictures/fig4.jpg)
+<img src="/Users/yangchao/Downloads/Fig 4 Page 1.jpg" alt="Fi" style="zoom:24%;" />
 
 ##### **第一阶段：视觉对齐预训练 (Visual Alignment Pretraining)**
 
