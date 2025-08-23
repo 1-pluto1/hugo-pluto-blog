@@ -103,6 +103,8 @@ UniFork 的整体架构如图 3 所示，它能够在统一的框架内同时实
 
 如图 4 所示，整体的训练过程可分为三个阶段：
 
+![fig4](/Users/yangchao/Pictures/fig4.jpg)
+
 ##### **第一阶段：视觉对齐预训练 (Visual Alignment Pretraining)**
 
 此阶段的目标是将视觉表示与预训练的 LLM 对齐。遵循先前的工作（Xie et al., 2024; Chen et al., 2025b），我们首先在 ImageNet-1K (Deng et al., 2009) 数据集上训练模型，以高效地捕捉像素级别的依赖关系。我们使用成对的图像和文本描述来构建学习任务，其中类别名称通过使用 OpenAI ImageNet 模板 (Radford et al., 2021) 被转换为自然语言提示。该数据被用于训练**图像字幕生成 (image captioning)** 和**文本到图像生成 (text-to-image generation)** 两个任务。随后，我们使用来自 Laion-En (Schuhmann et al., 2022) 的 3000 万样本和来自 COYO (Byeon et al., 2022) 的 1000 万样本的混合数据，对这两个任务进行训练。在此阶段，LLM 的权重被**冻结**，我们只训练随机初始化的视觉连接器 (visual connector) 和图像头 (image head)。生成任务遵循 `“<caption><image>”` 的格式，而字幕生成任务则使用 `“<image><caption>”` 的格式。
