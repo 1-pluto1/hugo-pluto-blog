@@ -300,7 +300,49 @@ $$\mathcal{L} = \mathbb{E}_{(x_0, h) \sim D, x_1, t} \|v_{\theta}(x_t, t, h) - v
 
 ##### Reinforcement Learning (RL)
 
+我们采用了两种不同的强化学习（RL）策略：**直接偏好优化 (DPO)** (Rafailov et al., 2023) 和 **分组相对策略优化 (GRPO)** (Shao et al., 2024)。
 
+* **DPO** ✅：擅长流匹配（单步）在线偏好建模，计算效率高。
+* **GRPO**：在训练期间进行同策略（on-policy）采样，并使用奖励模型评估每个轨迹。
+
+为了利用离线偏好学习的可扩展性优势，我们使用 **DPO** 进行相对大规模的强化学习，而将 **GRPO** 用于小规模的、细粒度的强化学习精调。两种算法的细节如下。
+
+
+
+###### (A) 直接偏好优化 (DPO)
+
+数据准备
+
+对于DPO的训练数据，我们给定相同的提示词，使用不同的随机初始化种子生成多张图像。然后，人工标注员的任务是从这些候选项中挑选出**最好**和**最差**的图像。数据被分为两类：带参考（黄金）图像的提示词，和不带参考图像的提示词。
+
+* 对于**有参考图像**的数据，标注员首先将生成结果与参考图进行比较。如果存在显著差异，标注员会被指示将最差的生成结果标记为被拒绝的样本。
+* 对于**没有参考图像**的提示词，标注员被要求在生成的图像中选出最好和最差的样本，或者指出所有生成结果的质量都不能令人满意。
+
+算法
+
+给定文本隐状态 $h$，被选中的生成图像（或黄金图像）$x_0^{win}$ 和被拒绝的生成图像 $x_{l0}^{ose}$，我们采样一个时间步 $t \sim (0, 1)$ 来构建输入潜在变量 $x_t^{win}$ 和 $x_{lt}^{ose}$ 以及它们对应的速度 $v_t^{win}$ 和 $v_{lt}^{ose}$（遵循公式1）。然后，受先前工作的启发 (Wallace et al., 2024)，我们基于流匹配训练准则构建了DPO目标，其公式如下：
+$$
+\begin{cases}
+\text{Diff}_{\text{policy}} = \|v_\theta(x_t^{win}, h, t) - v_t^{win}\|_2^2 - \|v_\theta(x_{lt}^{ose}, h, t) - v_{lt}^{ose}\|_2^2 \\
+\text{Diff}_{\text{ref}} = \|v_{\text{ref}}(x_t^{win}, h, t) - v_t^{win}\|_2^2 - \|v_{\text{ref}}(x_{lt}^{ose}, h, t) - v_{lt}^{ose}\|_2^2 \\
+\mathcal{L}_{\text{DPO}} = -\mathbb{E}_{h,(x_0^{win},x_{l0}^{ose})\sim D, t\sim U(0,1)} \left[ \log \sigma\left( -\beta (\text{Diff}_{\text{policy}} - \text{Diff}_{\text{ref}}) \right) \right],
+\end{cases}
+\quad (3)
+$$
+其中，$\text{Diff}_{\text{policy}}$ 和 $\text{Diff}_{\text{ref}}$ 分别表示由策略模型和参考模型计算出的偏好差异，$\beta$ 是一个缩放参数，$\sigma(\cdot)$ 表示sigmoid函数。
+
+
+
+###### (B) 分组相对策略优化 (GRPO)
+
+算法
+
+在使用DPO训练后，我们遵循 **Flow-GRPO** (Liu et al., 2025a) 框架，使用GRPO进行更细粒度的训练。给定文本隐状态 $h$，流模型预测出一组 $G$ 个图像 $\{x_0^i\}_{i=1}^G$ 以及相应的轨迹 $\{x_T^i, x_{T-1}^i, ..., x_0^i\}_{i=1}^G$。在每组内，优势函数可以公式化为：
+$$A_i = \frac{R(x_0^i, h) - \text{mean}(\{R(x_0^j, h)\}_{j=1}^G)}{\text{std}(\{R(x_0^j, h)\}_{j=1}^G)}, \quad (4)$$其中 $R$ 是奖励模型。然后，GRPO的训练目标是：$$\mathcal{L}_{\text{GRPO}}(\theta) = \mathbb{E}_{h\sim D, \{x_T^i,...,x_0^i\}_{i=1}^G\sim\pi_\theta} \left[ \frac{1}{G} \sum_{i=1}^G \frac{1}{T} \sum_{t=0}^{T-1} \min(r_t^i(\theta)A_i, \text{clip}(r_t^i(\theta), 1-\epsilon, 1+\epsilon)A_i) - \beta D_{\text{KL}}(\pi_\theta||\pi_{\text{ref}}) \right], \quad (5)$$
+其中 $r_t^i(\theta) = \frac{p_\theta(x_{t-1}^i|x_t^i,h)}{p_{\theta_{\text{old}}}(x_{t-1}^i|x_t^i,h)}$。
+
+在采样轨迹 $\{x_T^i, ..., x_0^i\}_{i=1}^G \sim \pi_\theta$ 时，对于流匹配采样我们有 $dx_t = v_t dt$（遵循公式1），其中 $v_t = v_\theta(x_t, t, h)$ 是预测的速度。然而，这种采样策略没有随机性，不适合用于探索。因此，我们**将采样过程重构为一个随机微分方程（SDE）过程**以增加随机性。SDE采样过程可以写作：
+$$dx_t = \left[ v_t + \frac{\sigma_t^2}{2t}(x_t + (1-t)v_t) \right] dt + \sigma_t dw, \quad (6)$$其中 $\sigma_t$ 表示随机性的大小。使用欧拉-丸山（Euler-Maruyama）离散化，我们得到：$$x_{t+\Delta t} = x_t + \left[ v_\theta(x_t, t, h) + \frac{\sigma_t^2}{2t}(x_t + (1-t)v_\theta(x_t, t, h)) \right] \Delta t + \sigma_t \sqrt{\Delta t} \epsilon. \quad (7)$$我们使用上述方程来采样轨迹。公式(5)中的KL散度可以得到一个解析解：$$D_{\text{KL}}(\pi_\theta || \pi_{\text{ref}}) = \Delta t \left[ \frac{\sigma_t(1-t)}{2t} + \frac{1}{\sigma_t} \right]^2 \frac{1}{2} ||v_\theta(x_t, t, h) - v_{\text{ref}}(x_t, t, h)||^2. \quad (8)$$
 
 
 
