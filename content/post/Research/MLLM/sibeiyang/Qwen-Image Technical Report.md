@@ -107,3 +107,20 @@ Qwen-Image 采用 Qwen2.5-VL 模型 (Bai et al., 2025) 作为文本输入的特�
 
 #### Multimodal Diffusion Transformer
 
+Qwen-Image 采用**多模态扩散Transformer (MMDiT)** (Esser et al., 2024) 来对文本和图像进行联合建模。这种方法已在一系列工作（如FLUX系列 (BlackForest, 2024; Labs et al., 2025) 和 Seedream系列 (Gong et al., 2025; Gao et al., 2025)）中被证明是有效的。1
+
+在每个模块（block）中，我们引入了一种新颖的位置编码方法：**多模态可缩放旋转位置编码（Multimodal Scalable RoPE, MSRoPE）**。如图8所示，我们比较了多种文本-图像联合位置编码策略。在传统的MMDiT模块中，文本标记（token）被直接拼接到经过展平（flattened）的图像位置嵌入之后。而 Seedream 3.0 (Gao et al., 2025) 则引入了可缩放旋转位置编码（Scaling RoPE），其中图像的位置编码被移至图像中心区域，而文本标记则被视为形状为 `[1, L]` 的二维标记。然后，使用二维旋转位置编码（2D RoPE） (Heo et al., 2024) 进行图文联合位置编码。
+
+尽管这种调整有助于分辨率的缩放训练，但文本和图像的某些行的位置编码（例如图8(B)中的第0个中间行）会变得同构（isomorphic），这使得模型更难区分文本标记和位于该行的图像潜在标记。此外，要确定一个合适的图像行来拼接文本标记也并非易事。
+
+为了解决上述挑战，我们引入了多模态可缩放旋转位置编码（MSRoPE）。在这种方法中，文本输入被视为二维张量，并且其两个维度应用相同的位置ID。如图8(C)所示，这在概念上等同于将文本沿着图像的对角线进行拼接。这种设计使得MSRoPE能够在图像端利用分辨率缩放的优势，同时在文本端保持与一维RoPE（1D-RoPE）的功能等效性，从而避免了为文本确定最佳位置编码的需要。
+
+我们在表1中展示了Qwen-Image的架构和配置。
+
+<img src="/Users/yangchao/Library/Application Support/typora-user-images/image-20250824183109336.png" alt="image-20250824183109336" style="zoom:50%;" />
+
+<img src="/Users/yangchao/Library/Application Support/typora-user-images/image-20250824183134348.png" alt="image-20250824183134348" style="zoom:50%;" />
+
+### Data
+
+#### Data Collection
