@@ -34,3 +34,12 @@ UseHugoToc: true
 为了提升图像编辑的一致性，我们引入了一种改进的多任务训练范式。该范式不仅包含了传统的文本到图像（T2I）和文本-图像到图像（TI2I）任务，还加入了图像到图像（I2I）的重建任务，从而有效地对齐了Qwen2.5-VL和MMDiT之间的潜在表征（latent representations）。此外，我们将原始图像分别输入到Qwen2.5-VL和VAE编码器中，以分别获取语义表征和重建表征。这种双重编码机制使得编辑模块能够在保持语义一致性与维持视觉保真度之间达到平衡。
 
 我们在多个公开基准测试上对Qwen-Image进行了全面评估，包括用于通用图像生成的GenEval、DPG和OneIG-Bench，以及用于图像编辑的GEdit、ImgEdit和GSO。Qwen-Image取得了业界顶尖（state-of-the-art）的性能，展现了其在图像生成和编辑两方面的强大能力。此外，在LongText-Bench、ChineseWord和CVTG-2K上的测试结果表明，Qwen-Image在文本渲染方面表现卓越——尤其是在中文文本生成上——以显著优势超越了现有的顶尖模型。这凸显了Qwen-Image作为一个领先图像生成模型的独特定位：它既具备广泛的通用能力，又拥有卓越的文本渲染精度。
+
+
+
+### Introduction
+
+<img src="/Users/yangchao/Library/Application Support/typora-user-images/image-20250824153323672.png" alt="image-20250824153323672" style="zoom:50%;" />
+
+
+
