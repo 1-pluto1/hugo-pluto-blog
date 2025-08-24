@@ -102,3 +102,8 @@ Qwen-Image 采用 Qwen2.5-VL 模型 (Bai et al., 2025) 作为文本输入的特�
 在训练过程中我们观察到：(1) 平衡**重建损失（reconstruction loss）**与**感知损失（perceptual loss）**能有效减少网格状的伪影（grid artifacts），这种伪影常见于像灌木丛这样的重复性纹理中。(2) 随着重建质量的提升，**对抗性损失（adversarial loss）**会变得无效，因为判别器（discriminator）已无法提供有效的指导。基于这些观察，我们只使用重建损失和感知损失，并在微调过程中动态调整它们的比例。
 
 有趣的是，我们发现，仅微调解码器就能有效地增强细节并改善小文本的渲染效果，从而为Qwen-Image的文本渲染能力打下了坚实的基础。相关的定量和定性结果在第5.2.1节中呈现。
+
+
+
+#### Multimodal Diffusion Transformer
+
