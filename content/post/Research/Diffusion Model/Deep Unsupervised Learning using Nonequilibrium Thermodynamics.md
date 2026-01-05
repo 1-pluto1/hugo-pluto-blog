@@ -27,7 +27,7 @@ UseHugoToc: true
 
 **论文标题：** Deep Unsupervised Learning using Nonequilibrium Thermodynamics
 
-**发表会议/年份：** ICML 2015
+**发表会议/年份：** ICML 2015.    
 
 **作者团队：** Jascha Sohl-Dickstein (Stanford/Google) 等
 
@@ -39,11 +39,11 @@ UseHugoToc: true
 
 
 
-#### Motivation
+# Motivation
 
 
 
-#### The Intuition
+## The Intuition
 
 
 
