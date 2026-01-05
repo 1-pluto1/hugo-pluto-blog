@@ -39,7 +39,7 @@ UseHugoToc: true
 
 
 
-# Motivation
+## Motivation
 
 
 
@@ -49,16 +49,16 @@ UseHugoToc: true
 
 
 
-#### Methodology & Math
+## Methodology & Math
 
 
 
-#### Experiments
+## Experiments
 
 
 
-#### Thoughts & Critique
+## Thoughts & Critique
 
 
 
-#### References
+## References
