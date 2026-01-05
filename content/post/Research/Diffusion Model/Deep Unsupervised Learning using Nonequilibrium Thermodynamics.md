@@ -23,7 +23,7 @@ UseHugoToc: true
 
 
 
-#### Metadata
+## Metadata
 
 **论文标题：** Deep Unsupervised Learning using Nonequilibrium Thermodynamics
 
@@ -33,11 +33,7 @@ UseHugoToc: true
 
 **核心关键词：** Diffusion Process, Non-equilibrium Thermodynamics, Langevin Dynamics
 
-**一句话总结：** 本文是扩散模型的**开山之作**，首次提出了通过“逐步破坏数据结构（扩散）”再“学习逆向恢复过程”来进行生成建模的思想，从物理学的非平衡热力学中汲取了灵感。
-
-
-
-
+**一句话总结：** 本文是扩散模型的**开山之作**，首次提出了通过“逐步破坏数据结构”再“学习逆向恢复过程”来进行生成建模的思想，从物理学的非平衡热力学中汲取了灵感。
 
 ## Motivation
 
