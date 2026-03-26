@@ -2,7 +2,7 @@
 title: "Motus: A Unified Latent Action World Model"
 aliases: []
 created: '2026-03-27 01:00:16'
-updated: '2026-03-27 01:36:43'
+updated: '2026-03-27 01:43:52'
 content_type: research
 note_type: literature
 domain: embodied
@@ -25,7 +25,7 @@ authors:
   - "Lei Ma"
   - "Hang Su"
   - "Jun Zhu"
-year: ""
+year: 
 venue: "arXiv"
 doi: "10.48550/arXiv.2512.13030"
 url: "https://doi.org/10.48550/arXiv.2512.13030"
@@ -35,7 +35,7 @@ pdf_path: "/Users/yangchao/Zotero/storage/RPZ4ICPA/Bi 等 - 2025 - Motus A Unifi
 related_topics: []
 publish_candidate: false
 tags:
-  - research/literature
+  - "research/literature"
 categories: []
 ---
 
