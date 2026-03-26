@@ -111,8 +111,7 @@ Motus 试图把理解、视频生成和动作建模统一进一个 latent action
 
 ### Related Notes
 
-- [[相关主题笔记]]
-- [[相关论文笔记]]
+- [[Don't Blind Your VLA: Aligning Visual Representations for OOD Generalization]]
 
 ## Quotes / Snippets
 

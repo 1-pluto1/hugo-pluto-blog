@@ -100,8 +100,7 @@ The growing success of Vision-Language-Action (VLA) models stems from the promis
 
 ### Related Notes
 
-- [[相关主题笔记]]
-- [[相关论文笔记]]
+- [[Motus: A Unified Latent Action World Model]]
 
 ## Quotes / Snippets
 

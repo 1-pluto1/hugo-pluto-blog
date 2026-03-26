@@ -106,5 +106,5 @@ categories: []
 
 - [[Motus]]
 - [[Don't Blind Your VLA]]
-- [[workspace/research/literature/embodied/Motus]]
-- [[workspace/research/literature/embodied/Don't Blind Your VLA]]
+- [[topic]]
+
