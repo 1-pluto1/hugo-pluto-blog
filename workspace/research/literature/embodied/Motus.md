@@ -32,7 +32,8 @@ url: "https://doi.org/10.48550/arXiv.2512.13030"
 zotero_key: "biMotusUnifiedLatent2025"
 zotero_link: ""
 pdf_path: "/Users/yangchao/Zotero/storage/RPZ4ICPA/Bi 等 - 2025 - Motus A Unified Latent Action World Model.pdf"
-related_topics: []
+related_topics:
+  - "Embodied Foundation Models and VLA Generalization"
 publish_candidate: false
 tags:
   - "research/literature"
@@ -112,6 +113,7 @@ Motus 试图把理解、视频生成和动作建模统一进一个 latent action
 ### Related Notes
 
 - [[Don't Blind Your VLA: Aligning Visual Representations for OOD Generalization]]
+- [[Embodied Foundation Models and VLA Generalization]]
 
 ## Quotes / Snippets
 

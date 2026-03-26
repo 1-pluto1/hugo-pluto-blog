@@ -21,7 +21,8 @@ url: "https://doi.org/10.48550/arXiv.2510.25616"
 zotero_key: "kachaevDontBlindYour2025"
 zotero_link: ""
 pdf_path: "/Users/yangchao/Zotero/storage/TL3PVS9A/Kachaev 等 - 2025 - Don't Blind Your VLA Aligning Visual Representations for OOD Generalization.pdf"
-related_topics: []
+related_topics:
+  - "Embodied Foundation Models and VLA Generalization"
 publish_candidate: false
 tags:
   - "research/literature"
@@ -100,6 +101,7 @@ The growing success of Vision-Language-Action (VLA) models stems from the promis
 
 ### Related Notes
 
+- [[Embodied Foundation Models and VLA Generalization]]
 - [[Motus: A Unified Latent Action World Model]]
 
 ## Quotes / Snippets
