@@ -1,217 +1,38 @@
 [
   {
-    "filename": "page01_img01.png",
+    "filename": "source_fig_01.png",
+    "page": 0,
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_01.png",
+    "source": "arxiv-source"
+  },
+  {
+    "filename": "source_fig_02_page01.png",
     "page": 1,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page01_img01.png"
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_02_page01.png",
+    "source": "source-pdf"
   },
   {
-    "filename": "page02_img02.png",
-    "page": 2,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page02_img02.png"
+    "filename": "source_fig_03.png",
+    "page": 0,
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_03.png",
+    "source": "arxiv-source"
   },
   {
-    "filename": "page03_img03.png",
-    "page": 3,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page03_img03.png"
+    "filename": "source_fig_04_page01.png",
+    "page": 1,
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_04_page01.png",
+    "source": "source-pdf"
   },
   {
-    "filename": "page04_img04.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img04.jpeg"
+    "filename": "source_fig_05.png",
+    "page": 0,
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_05.png",
+    "source": "arxiv-source"
   },
   {
-    "filename": "page04_img05.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img05.jpeg"
-  },
-  {
-    "filename": "page04_img06.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img06.jpeg"
-  },
-  {
-    "filename": "page04_img07.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img07.jpeg"
-  },
-  {
-    "filename": "page04_img08.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img08.jpeg"
-  },
-  {
-    "filename": "page04_img09.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img09.jpeg"
-  },
-  {
-    "filename": "page04_img10.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img10.jpeg"
-  },
-  {
-    "filename": "page04_img11.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img11.jpeg"
-  },
-  {
-    "filename": "page04_img12.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img12.jpeg"
-  },
-  {
-    "filename": "page04_img13.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img13.jpeg"
-  },
-  {
-    "filename": "page04_img14.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img14.jpeg"
-  },
-  {
-    "filename": "page04_img15.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img15.jpeg"
-  },
-  {
-    "filename": "page04_img16.jpeg",
-    "page": 4,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page04_img16.jpeg"
-  },
-  {
-    "filename": "page05_img17.png",
-    "page": 5,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page05_img17.png"
-  },
-  {
-    "filename": "page11_img18.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img18.jpeg"
-  },
-  {
-    "filename": "page11_img19.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img19.jpeg"
-  },
-  {
-    "filename": "page11_img20.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img20.jpeg"
-  },
-  {
-    "filename": "page11_img21.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img21.jpeg"
-  },
-  {
-    "filename": "page11_img22.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img22.jpeg"
-  },
-  {
-    "filename": "page11_img23.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img23.jpeg"
-  },
-  {
-    "filename": "page11_img24.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img24.jpeg"
-  },
-  {
-    "filename": "page11_img25.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img25.jpeg"
-  },
-  {
-    "filename": "page11_img26.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img26.jpeg"
-  },
-  {
-    "filename": "page11_img27.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img27.jpeg"
-  },
-  {
-    "filename": "page11_img28.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img28.jpeg"
-  },
-  {
-    "filename": "page11_img29.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img29.jpeg"
-  },
-  {
-    "filename": "page11_img30.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img30.jpeg"
-  },
-  {
-    "filename": "page11_img31.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img31.jpeg"
-  },
-  {
-    "filename": "page11_img32.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img32.jpeg"
-  },
-  {
-    "filename": "page11_img33.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img33.jpeg"
-  },
-  {
-    "filename": "page11_img34.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img34.jpeg"
-  },
-  {
-    "filename": "page11_img35.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img35.jpeg"
-  },
-  {
-    "filename": "page11_img36.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img36.jpeg"
-  },
-  {
-    "filename": "page11_img37.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img37.jpeg"
-  },
-  {
-    "filename": "page11_img38.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img38.jpeg"
-  },
-  {
-    "filename": "page11_img39.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img39.jpeg"
-  },
-  {
-    "filename": "page11_img40.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img40.jpeg"
-  },
-  {
-    "filename": "page11_img41.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img41.jpeg"
-  },
-  {
-    "filename": "page11_img42.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img42.jpeg"
-  },
-  {
-    "filename": "page11_img43.jpeg",
-    "page": 11,
-    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/page11_img43.jpeg"
+    "filename": "source_fig_06.png",
+    "page": 0,
+    "path": "/Users/yangchao/Documents/Obsidian Note/myblog/pluto/workspace/assets/images/kachaevDontBlindYour2025/source_fig_06.png",
+    "source": "arxiv-source"
   }
 ]
