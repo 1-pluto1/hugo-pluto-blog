@@ -106,5 +106,4 @@ categories: []
 
 - [[Motus]]
 - [[Don't Blind Your VLA]]
-- [[topic]]
 
